@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "React UI library",
   "scripts": {
     "build": "tsc",
