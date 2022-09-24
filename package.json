@@ -1,5 +1,5 @@
 {
-  "name": "lotusui",
+  "name": "@redlotus/lotusui",
   "version": "0.0.1",
   "description": "React UI library",
   "scripts": {
@@ -7,16 +7,13 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\""
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/thewhitelotus"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tomimarkus991/lotusui.git"
   },
-  "keywords": [],
+  "keywords": ["react", "tailwindcss"],
   "author": "Tomi Markus Alber",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tomimarkus991/lotusui/issues"
   },
