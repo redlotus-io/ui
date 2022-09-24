@@ -16,10 +16,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
 
     "incremental": true,
     "noFallthroughCasesInSwitch": true,
-    "declaration": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
