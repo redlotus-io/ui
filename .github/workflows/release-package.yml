@@ -16,7 +16,7 @@ jobs:
           node-version: "14"
           registry-url: "https://registry.npmjs.org"
       - run: yarn
-      - run: yarn rollup
+      - run: yarn build
 
   publish-gpr:
     needs: build
