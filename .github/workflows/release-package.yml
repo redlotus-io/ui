@@ -1,7 +1,11 @@
 name: lotusui
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
+# on:
+#   release:
+#     types: [created]
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -737,6 +737,11 @@
   resolved "https://registry.yarnpkg.com/@types/aria-query/-/aria-query-4.2.2.tgz#ed4e0ad92306a704f9fb132a0cfcf77486dbe2bc"
   integrity sha512-HnYpAE1Y6kRyKM/XkEuiRQhTHvkzMBurTHnpFLYLBGPIylZNPs9jJcuOOYWxPLJCSEtmZT0Y8rHDokKN7rRTig==
 
+"@types/confusing-browser-globals@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/confusing-browser-globals/-/confusing-browser-globals-1.0.0.tgz#d81348816d6005c96b217d006b42b4a3eb12d3b5"
+  integrity sha512-2RQF2SJW3pAQgkHtlIefyxiRkdlBwXxqNiiDDoPyaR9R0SqIujHoP6ceLSAE95EKd7CCLV3F/n4ohOAMi5edpQ==
+
 "@types/estree@*":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.0.tgz#5fb2e536c1ae9bf35366eed879e827fa59ca41c2"
@@ -1391,6 +1396,11 @@ concat-with-sourcemaps@^1.1.0:
   dependencies:
     source-map "^0.6.1"
 
+confusing-browser-globals@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
+  integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
+
 convert-source-map@^1.5.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.8.0.tgz#f3373c32d21b4d780dd8004514684fb791ca4369"
@@ -1832,6 +1842,16 @@ eslint-config-prettier@^8.5.0:
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
   integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
+
+eslint-config-redlotus-base@latest:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/eslint-config-redlotus-base/-/eslint-config-redlotus-base-0.0.7.tgz#33a37fd66589293e94441e65f9110bae7ef1c9d3"
+  integrity sha512-VfGvLQq645lp86BOJgwNNv9Il/2TlPoT1jQCsQld3a7Y50QXaERDsHSdABcDWWI95lwV1jHDDgMyg4SAN2lHGA==
+
+eslint-config-redlotus-react@latest:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/eslint-config-redlotus-react/-/eslint-config-redlotus-react-0.0.7.tgz#fec1f1e42ab19247e9796ac7d95c0b712fe902da"
+  integrity sha512-YxzWhmeA3xM+xLkhK1i5hHIfjI56xQNcEGRFLGN6KSIRSaZ2uG5s9eQdibs41tcYx9454gbPzUFRQGPa9Bgy7A==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
