@@ -1,9 +1,9 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "React UI library",
   "scripts": {
-    "build": "tsc",
+    "build": "microbundle",
     "rollup": "rollup -c",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore"
   },
@@ -15,12 +15,29 @@
     "react",
     "tailwindcss"
   ],
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "main"
+    ]
+  },
+  "types": "dist/index.d.ts",
   "author": "Tomi Markus Alber",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tomimarkus991/lotusui/issues"
   },
   "homepage": "https://github.com/tomimarkus991/lotusui#readme",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -69,6 +86,7 @@
     "eslint-plugin-testing-library": "^5.6.3",
     "husky": "^8.0.1",
     "jsdom": "^20.0.0",
+    "microbundle": "^0.15.1",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "rollup": "^2.79.1",
@@ -93,17 +111,5 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "tailwindcss-border-gradient-radius": "^3.0.1"
-  },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public",
-    "branches": [
-      "main"
-    ]
-  },
-  "types": "dist/index.d.ts"
+  }
 }
