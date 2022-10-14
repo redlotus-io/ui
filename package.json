@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "React UI library",
   "scripts": {
     "m": "microbundle",
@@ -17,6 +17,7 @@
   ],
   "files": [
     "dist/*",
+    "public/*",
     "*.json",
     "*.js"
   ],

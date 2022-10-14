@@ -1,6 +1,8 @@
 import clsx from "clsx";
+import { HiChartBar, HiHome } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
-import { NavbarBottom, NavbarTop, Sidebar } from "components";
+import { animations, AnimationWrapper, NavbarBottom, NavbarTop, Sidebar } from "components";
 import { useSidebar } from "context";
 import { useIsMobile } from "hooks";
 
@@ -28,7 +30,26 @@ export const DefaultWrapper = ({ children, rightSide }: Props) => {
                 user={{ id: "1", username: "Galaxy", email: "galaxy@gmail.com", avatar: null }}
               />
               <div className="px-4">{children}</div>
-              <NavbarBottom />
+              <NavbarBottom>
+                <Link to="/">
+                  <AnimationWrapper
+                    variants={animations.smallScale}
+                    animateOnAllScreens
+                    keyIndex="nb-home-icon"
+                  >
+                    <HiHome className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
+                  </AnimationWrapper>
+                </Link>
+                <Link to="/stats">
+                  <AnimationWrapper
+                    variants={animations.smallScale}
+                    animateOnAllScreens
+                    keyIndex="nb-chart-icon"
+                  >
+                    <HiChartBar className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
+                  </AnimationWrapper>
+                </Link>
+              </NavbarBottom>
             </div>
           </div>
           <Sidebar />
