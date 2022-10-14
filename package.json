@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "React UI library",
   "scripts": {
     "m": "microbundle",
@@ -16,7 +16,10 @@
     "tailwindcss"
   ],
   "files": [
-    "dist"
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
   ],
   "publishConfig": {
     "access": "public",
