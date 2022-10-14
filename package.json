@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "React UI library",
   "scripts": {
     "m": "microbundle",
@@ -34,13 +34,8 @@
     "url": "https://github.com/tomimarkus991/lotusui/issues"
   },
   "homepage": "https://github.com/tomimarkus991/lotusui#readme",
-  "exports": {
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.modern.js"
-  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "unpkg": "./dist/index.umd.js",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
