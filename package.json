@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "description": "React UI library",
   "scripts": {
     "build": "rollup -c",
@@ -15,16 +15,12 @@
     "tailwindcss"
   ],
   "files": [
-    "dist/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "dist",
+    "public",
+    "README.md"
   ],
   "publishConfig": {
-    "access": "public",
-    "branches": [
-      "main"
-    ]
+    "access": "public"
   },
   "types": "dist/index.d.ts",
   "author": "Tomi Markus Alber",
@@ -96,18 +92,19 @@
     "typescript": "^4.8.3"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@headlessui/react": "^1.7.1",
-    "@react-hook/window-size": "^3.1.1",
-    "clsx": "^1.2.1",
-    "date-fns": "^2.29.2",
-    "formik": "^2.2.9",
-    "framer-motion": "^7.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
-    "react-router-dom": "^6.3.0",
-    "tailwindcss-border-gradient-radius": "^3.0.1"
+    "@emotion/react": ">=11.10.4",
+    "@emotion/styled": ">=11.10.4",
+    "@headlessui/react": ">=1.7.1",
+    "@react-hook/window-size": ">=3.1.1",
+    "clsx": ">=1.2.1",
+    "date-fns": ">=2.29.2",
+    "formik": ">=2.2.9",
+    "framer-motion": ">=7.3.2",
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18",
+    "react-icons": ">=4.4.0",
+    "react-router-dom": ">=6.3.0",
+    "tailwindcss-border-gradient-radius": ">=3.0.1",
+    "tailwindcss": ">=3.1.8"
   }
 }
