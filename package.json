@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "React UI library",
   "scripts": {
     "build": "rollup -c",
