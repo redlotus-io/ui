@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "React UI library",
   "scripts": {
     "build": "rollup -c",
@@ -102,7 +102,7 @@
     "framer-motion": ">=7.3.2",
     "react": "^17 || ^18",
     "react-dom": "^17 || ^18",
-    "react-icons": ">=4.4.0",
+    "react-icons": "^4.3.1",
     "react-router-dom": ">=6.3.0",
     "tailwindcss-border-gradient-radius": ">=3.0.1",
     "tailwindcss": ">=3.1.8"
