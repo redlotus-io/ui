@@ -3,11 +3,16 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { AnimationWrapper, ExpandedSidebarContent, SmallSidebarContent } from "components";
+import { AnimationWrapper } from "components";
 import { useSidebar } from "context";
 import { useIsMobile } from "hooks";
 
-export const Sidebar = () => {
+interface Props {
+  SmallSidebarContent: () => JSX.Element;
+  ExpandedSidebarContent: () => JSX.Element;
+}
+
+export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) => {
   const { sidebarState, setSidebarState, placement } = useSidebar();
   const { isMobile } = useIsMobile();
   const location = useLocation();
