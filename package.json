@@ -1,9 +1,8 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "React UI library",
   "scripts": {
-    "m": "microbundle",
     "build": "rollup -c",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore"
   },
@@ -84,7 +83,6 @@
     "eslint-plugin-testing-library": "^5.6.3",
     "husky": "^8.0.1",
     "jsdom": "^20.0.0",
-    "microbundle": "^0.15.1",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "rollup": "^2.79.1",
