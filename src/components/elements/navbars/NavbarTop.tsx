@@ -4,14 +4,15 @@ import { UserType } from "types";
 
 interface Props {
   user: UserType;
+  title: string;
 }
 
-export const NavbarTop = ({ user }: Props) => {
+export const NavbarTop = ({ user, title }: Props) => {
   const { setSidebarState } = useSidebar();
   return (
     <div className="sticky top-0 z-[1020] mb-3 flex h-16 w-full items-center bg-slate-50 py-12">
       <div className="flex flex-1 items-center justify-between px-4">
-        <p className="text-2xl font-semibold text-gray-800">Subscriptions</p>
+        <p className="text-2xl font-semibold text-gray-800">{title}</p>
         <AnimationWrapper variants={animations.smallScale} keyIndex="nt-user-icon">
           <div
             role="button"
