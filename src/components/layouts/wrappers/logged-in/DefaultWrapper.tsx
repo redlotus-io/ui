@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { HiChartBar, HiHome } from "react-icons/hi";
+import { HiChartBar, HiHome } from "react-icons/all";
 import { Link } from "react-router-dom";
 
 import { animations, AnimationWrapper, NavbarBottom, NavbarTop, Sidebar } from "components";
