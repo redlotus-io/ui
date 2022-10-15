@@ -27,9 +27,6 @@ input[type="number"] {
 }
 
 @layer components {
-  .sidebar-link {
-    @apply mr-3 w-8 h-8 fill-gray-800;
-  }
 
   /* IE and Edge */
   .no-scrollbar {
@@ -42,7 +39,7 @@ input[type="number"] {
   }
 
   .input-error {
-    @apply border-2 border-red-300 caret-red-400 focus: outline-none focus:border-red-500;
+    @apply border-2 border-red-300 caret-red-400 focus:outline-none focus:border-red-500;
   }
 
   .gradient-border-example {

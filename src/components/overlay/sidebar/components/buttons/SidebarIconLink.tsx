@@ -21,7 +21,7 @@ interface ContentProps {
 
 type Props = SidebarItemProps & HTMLProps<HTMLDivElement>;
 
-const Content = ({ children, icon, tooltip, isActive }: ContentProps) => {
+const Content = ({ children, icon, tooltip, isActive = false }: ContentProps) => {
   return (
     <motion.div
       whileHover="whileHover"

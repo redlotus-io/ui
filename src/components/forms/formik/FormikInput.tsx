@@ -30,7 +30,7 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
   inputSize?: keyof typeof sizes;
 };
 
-export const Input = ({
+export const FormikInput = ({
   label,
   name,
   className = "appearance-none px-4",
