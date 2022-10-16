@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 
 import { AnimationWrapper } from "components";
@@ -8,8 +8,8 @@ import { useSidebar } from "context";
 import { useIsMobile } from "hooks";
 
 interface Props {
-  SmallSidebarContent: () => JSX.Element;
-  ExpandedSidebarContent: () => JSX.Element;
+  SmallSidebarContent: ReactNode;
+  ExpandedSidebarContent: ReactNode;
 }
 
 export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) => {
@@ -64,7 +64,7 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
                 placement === "right" ? "right-0" : "left-0"
               )}
             >
-              <ExpandedSidebarContent />
+              {ExpandedSidebarContent}
             </AnimationWrapper>
 
             <AnimationWrapper
@@ -110,7 +110,7 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
           }}
           className={clsx("sticky top-0 flex h-[100vh] w-72 flex-col bg-white shadow-lg")}
         >
-          <ExpandedSidebarContent />
+          {ExpandedSidebarContent}
         </AnimationWrapper>
       )}
       <AnimatePresence initial={true}>
@@ -134,7 +134,7 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
             }}
             className={clsx("sticky top-0 z-[998] flex h-[100vh] w-24 flex-col bg-white shadow-lg")}
           >
-            <SmallSidebarContent />
+            {SmallSidebarContent}
           </AnimationWrapper>
         )}
       </AnimatePresence>
