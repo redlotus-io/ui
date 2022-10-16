@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.39",
+  "version": "0.0.40",
   "description": "React UI library",
   "scripts": {
     "build": "rollup -c",
@@ -17,8 +17,7 @@
   "files": [
     "dist",
     "public",
-    "README.md",
-    ".env"
+    "README.md"
   ],
   "publishConfig": {
     "access": "public"

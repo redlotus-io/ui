@@ -1,3 +1,4 @@
 node_modules
 .rollup.cache
 src
+.env
