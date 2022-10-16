@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "description": "React UI library",
   "scripts": {
     "build": "rollup -c",
@@ -86,7 +86,6 @@
     "rollup-plugin-dts": "^4.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-tailwindcss": "^1.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "tailwind-scrollbar": "^1.3.2",
     "tailwind-scrollbar-hide": "^1.1.7",
