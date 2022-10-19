@@ -3,8 +3,16 @@
   "version": "0.0.42",
   "description": "React UI library",
   "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest",
+    "vite-build": "tsc && vite build",
+    "coverage": "vitest run --coverage",
     "build": "rollup -c",
-    "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore"
+    "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -36,6 +44,7 @@
     "@emotion/styled": "^11.10.4",
     "@headlessui/react": "^1.7.1",
     "@react-hook/window-size": "^3.1.1",
+    "@storybook/builder-vite": "^0.2.4",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.2",
     "formik": "^2.2.9",
@@ -44,12 +53,19 @@
     "react-dom": "^18.2.0",
     "react-icons": "4.3.1",
     "react-router-dom": "^6.3.0",
-    "tailwindcss-border-gradient-radius": "^3.0.1"
+    "tailwindcss-border-gradient-radius": "^3.0.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^23.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@rollup/plugin-typescript": "^9.0.1",
+    "@storybook/addon-essentials": "7.0.0-alpha.39",
+    "@storybook/addon-interactions": "7.0.0-alpha.39",
+    "@storybook/addon-links": "7.0.0-alpha.39",
+    "@storybook/react": "7.0.0-alpha.39",
+    "@storybook/react-vite": "7.0.0-alpha.39",
+    "@storybook/testing-library": "0.0.13",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/react-hooks": "^8.0.1",
@@ -75,6 +91,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.6",
     "eslint-plugin-tailwindcss": "^3.6.1",
     "eslint-plugin-testing-library": "^5.6.3",
     "husky": "^8.0.1",
@@ -86,10 +103,17 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
+    "storybook": "7.0.0-alpha.39",
     "tailwind-scrollbar": "^1.3.2",
     "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "^4.8.3"
+    "typescript": "^4.8.3",
+    "lint-staged": "^13.0.3",
+    "vite": "^3.1.8",
+    "vite-plugin-checker": "^0.5.1",
+    "vite-plugin-pwa": "^0.13.1",
+    "vite-tsconfig-paths": "^3.5.1",
+    "vitest": "^0.24.3"
   },
   "peerDependencies": {
     "@emotion/react": ">=11.10.4",

@@ -28,7 +28,17 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        exclude: [
+          "**/stories",
+          "**/routes",
+          "**/pages",
+          "main.tsx",
+          "vite-env.d.ts",
+          "DefaultPageWrapper.tsx",
+        ],
+      }),
       terser(),
       postcss({
         config: {

@@ -1,2 +1,3 @@
 extends:
   - eslint-config-redlotus-react/main
+  - plugin:storybook/recommended
