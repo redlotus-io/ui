@@ -1,9 +1,15 @@
-import { DefaultPageWrapper } from "components";
+import { DefaultPageWrapper, RealButton } from "components";
 
 export const HomePage = () => {
   return (
-    <DefaultPageWrapper RightSide={<div>tere</div>}>
-      <div className="h-52 w-52 bg-slate-50">
+    <DefaultPageWrapper
+      RightSide={
+        <div>
+          <RealButton>tere</RealButton>
+        </div>
+      }
+    >
+      <div>
         <p>Hello</p>
       </div>
     </DefaultPageWrapper>
