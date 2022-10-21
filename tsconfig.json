@@ -22,7 +22,7 @@
     "jsx": "react-jsx",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "incremental": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -40,6 +40,7 @@
     "*.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
   ],
 }
