@@ -21,6 +21,16 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
+      postcss({
+        config: {
+          path: "./postcss.config.js",
+        },
+        extensions: [".css"],
+        minimize: true,
+        inject: {
+          insertAt: "top",
+        },
+      }),
       resolve(),
       commonjs(),
       typescript({
@@ -35,16 +45,6 @@ export default [
         ],
       }),
       terser(),
-      postcss({
-        config: {
-          path: "./postcss.config.js",
-        },
-        extensions: [".css"],
-        minimize: true,
-        inject: {
-          insertAt: "top",
-        },
-      }),
     ],
     external: ["react", "react-dom"],
   },
