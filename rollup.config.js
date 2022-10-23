@@ -30,20 +30,13 @@ export default [
         inject: {
           insertAt: "top",
         },
+        modules: true,
+        extract: true,
       }),
       resolve(),
       commonjs(),
       typescript({
-        tsconfig: "./tsconfig.json",
-        exclude: [
-          "stories",
-          "routes",
-          "pages",
-          "test",
-          "main.tsx",
-          "vite-env.d.ts",
-          "DefaultPageWrapper.tsx",
-        ],
+        tsconfig: "./tsconfig.rollup.json",
       }),
       terser(),
     ],
