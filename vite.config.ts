@@ -2,7 +2,14 @@
 
 import path from "path";
 
+import json from "@rollup/plugin-json";
+import resolve from "@rollup/plugin-node-resolve";
+import typescript from "@rollup/plugin-typescript";
 import react from "@vitejs/plugin-react";
+// import dts from "rollup-plugin-dts";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import { terser } from "rollup-plugin-terser";
+// import rollupTs from "rollup-plugin-typescript2";
 import { defineConfig } from "vite";
 import checker from "vite-plugin-checker";
 import { VitePWA } from "vite-plugin-pwa";
@@ -70,11 +77,8 @@ export default defineConfig({
     outDir: "dist",
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
-      name: "lotusui",
+      fileName: "index",
       formats: ["es"],
-      fileName: format => {
-        return `[name].${format}.js`;
-      },
     },
     rollupOptions: {
       // preserveModules: true,
@@ -83,6 +87,28 @@ export default defineConfig({
         exports: "named",
         sourcemap: true,
       },
+      plugins: [
+        // dts(),
+        // only for type checking
+        // {
+        //   ...rollupTs({
+        //     check: true,
+        //     tsconfig: "./tsconfig.rollup.json",
+        //     tsconfigOverride: {
+        //       noEmits: true,
+        //     },
+        //   }),
+        //   // run before build
+        //   enforce: "pre",
+        // },
+        typescript({
+          tsconfig: "./tsconfig.rollup.json",
+        }),
+        json(),
+        terser(),
+        resolve(),
+        peerDepsExternal(),
+      ],
     },
   },
   publicDir: "public",

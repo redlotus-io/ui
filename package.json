@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/lotusui",
-  "version": "0.0.55",
+  "version": "0.0.56",
   "description": "React UI library",
   "scripts": {
     "start": "vite",
@@ -31,14 +31,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "types": "dist/esm/src/index.d.ts",
+  "types": "dist/src/index.d.ts",
+  "module": "dist/index.mjs",
   "author": "Tomi Markus Alber",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tomimarkus991/lotusui/issues"
   },
   "homepage": "https://github.com/tomimarkus991/lotusui#readme",
-  "module": "dist/esm/index.js",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -107,12 +107,14 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
     "storybook": "7.0.0-alpha.39",
     "tailwind-scrollbar": "^1.3.2",
     "tailwind-scrollbar-hide": "^1.1.7",
     "typescript": "^4.8.3",
     "vite": "^3.1.8",
     "vite-plugin-checker": "^0.5.1",
+    "vite-plugin-dts": "^1.6.6",
     "vite-plugin-pwa": "^0.13.1",
     "vite-tsconfig-paths": "^3.5.1",
     "vitest": "^0.24.3"
