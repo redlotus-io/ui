@@ -1,15 +1,20 @@
 /// <reference types="vitest" />
 
+import path from "path";
+
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import checker from "vite-plugin-checker";
 import { VitePWA } from "vite-plugin-pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
 
+// @ts-ignore
+import injectcss from "./injectcss";
 // https://vitejs.dev/config/
 
 export default defineConfig({
   plugins: [
+    injectcss(),
     react(),
     tsconfigPaths(),
     checker({ typescript: true }),
@@ -59,6 +64,25 @@ export default defineConfig({
     setupFiles: "./src/test/setupTests.ts",
     coverage: {
       reporter: ["text", "json", "html"],
+    },
+  },
+  build: {
+    outDir: "dist",
+    lib: {
+      entry: path.resolve(__dirname, "src/index.ts"),
+      name: "lotusui",
+      formats: ["es"],
+      fileName: format => {
+        return `[name].${format}.js`;
+      },
+    },
+    rollupOptions: {
+      // preserveModules: true,
+      external: ["react", "react-dom"],
+      output: {
+        exports: "named",
+        sourcemap: true,
+      },
     },
   },
   publicDir: "public",
