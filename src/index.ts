@@ -5,10 +5,9 @@ export * from "./context";
 export * from "./hooks";
 export * from "./types";
 
+import * as framerMotion from "framer-motion";
 
-// import postcss from "postcss";
-
-// export {postcss};
+export {framerMotion};
 
 export * from "@emotion/react";
 export * from "@emotion/styled";
@@ -18,5 +17,4 @@ export * from "clsx";
 export * from "date-fns";
 export * from "formik";
 export * from "react-icons";
-// export * from "autoprefixer";
 

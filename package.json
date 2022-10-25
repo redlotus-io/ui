@@ -2,18 +2,19 @@
   "name": "@redlotus/lotusui",
   "version": "0.0.56",
   "description": "React UI library",
+  "type": "module",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "preview": "vite preview",
     "test": "vitest",
-    "vite-build": "tsc && vite build",
     "coverage": "vitest run --coverage",
     "lint:fix": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build": "vite build",
-    "gen-version": "node src/commands/gen-version.js"
+    "build": "vite build && yarn gen-types",
+    "gen-version": "node src/commands/gen-version.js",
+    "gen-types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,9 @@
     "public",
     "README.md"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "types": "dist/src/index.d.ts",
-  "module": "dist/index.mjs",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "dist/types/src/index.d.ts",
   "author": "Tomi Markus Alber",
   "license": "MIT",
   "bugs": {
@@ -106,7 +105,6 @@
     "rollup-plugin-dts": "^4.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "storybook": "7.0.0-alpha.39",
     "tailwind-scrollbar": "^1.3.2",
@@ -115,15 +113,16 @@
     "vite": "^3.1.8",
     "vite-plugin-checker": "^0.5.1",
     "vite-plugin-dts": "^1.6.6",
-    "vite-plugin-pwa": "^0.13.1",
     "vite-tsconfig-paths": "^3.5.1",
     "vitest": "^0.24.3"
   },
   "peerDependencies": {
-    "framer-motion": ">=7.3.2",
     "react": "^17 || ^18",
     "react-dom": "^17 || ^18",
     "react-router-dom": ">=6.3.0",
     "tailwindcss-border-gradient-radius": ">=3.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
