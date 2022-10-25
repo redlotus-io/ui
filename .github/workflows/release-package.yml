@@ -1,4 +1,4 @@
-name: lotusui
+name: redlotusui
 on:
   push:
     branches:

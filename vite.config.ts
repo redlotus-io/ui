@@ -24,7 +24,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       fileName: "index",
-      name: "LotusUI",
+      name: "RedLotusUI",
     },
     rollupOptions: {
       output: {
