@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import { SidebarProvider } from "context";
 import { Router } from "routes";
-import "./index.css";
+import "./style.css";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 
