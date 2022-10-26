@@ -10,7 +10,7 @@
 
 React UI Components built with Tailwind 3. **Get a super boost to your development** 🚀
 
-## 📖 Documentation NOT RELEASED YET
+## 📖 Documentation
 Read the <a href="">Online Documentation</a>.
 
 ## Quickstart
