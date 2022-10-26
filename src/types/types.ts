@@ -4,13 +4,7 @@ export interface UserType {
   username: string;
   avatar: string | null;
 }
-
-export interface SelectOption {
+export interface SelectOption<T> {
   id: number;
-  name: string;
+  name: T;
 }
-
-export * from "../components";
-export * from "../context";
-export * from "../hooks";
-export * from "../types";

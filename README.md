@@ -20,7 +20,7 @@ yarn add @redlotus/ui
 Add the following to your `main.tsx` file:
 
 ```bash
-import "@redlotus/lotusui/dist/style.css";
+import "@redlotus/ui/dist/style.css";
 ```
 
 ---
