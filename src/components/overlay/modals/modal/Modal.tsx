@@ -57,7 +57,7 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
               animateOnAllScreens
               className={clsx(
                 modalMaxWidth[maxWidth],
-                "z-[1020] min-w-[95%] max-w-[94%] rounded-xl bg-white min:min-w-[20rem]"
+                "min:min-w-[20rem] z-[1020] min-w-[95%] max-w-[94%] rounded-xl bg-white"
               )}
             >
               {children}
