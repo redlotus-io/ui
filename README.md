@@ -2,7 +2,7 @@
 ![RedLotusUI-Logo-Light](.github/logo-light-mode.svg#gh-light-mode-only)
 
 <p>
-  <a href="https://github.com/@redlotus/ui/actions/workflows/release-package.yml"><img src="https://github.com/tomimarkus991/lotusui/actions/workflows/release-package.yml/badge.svg?branch=main&event=push" alt="ci"></a>
+  <a href="https://github.com/redlotus-io/ui/actions/workflows/release-package.yml"><img src="https://github.com/tomimarkus991/lotusui/actions/workflows/release-package.yml/badge.svg?branch=main&event=push" alt="ci"></a>
   <a href="https://www.npmjs.com/package/@redlotus/ui"><img src="https://badgen.net/npm/dm/@redlotus/ui" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/@redlotus/ui"><img src="https://badgen.net/npm/v/@redlotus/ui/latest" alt="Version"></a>
   <a href="https://www.npmjs.com/package/@redlotus/ui"><img src="https://badgen.net/npm/license/@redlotus/ui" alt="License"></a>
