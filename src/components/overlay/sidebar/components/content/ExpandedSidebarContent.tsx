@@ -2,17 +2,15 @@ import { HiX } from "react-icons/all";
 
 import { AnimationWrapper, SidebarLink, animations } from "components";
 import { useSidebar } from "context";
-import { routes } from "routes";
 import { Router } from "types";
 
 interface Props {
   appLogo: string;
-  username: string;
-  avatar: string;
   routes: Router[];
+  BottomContent?: React.ReactNode;
 }
 
-export const ExpandedSidebarContent = ({ appLogo, username, avatar }: Props) => {
+export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props) => {
   const { setSidebarState } = useSidebar();
 
   return (
@@ -42,10 +40,7 @@ export const ExpandedSidebarContent = ({ appLogo, username, avatar }: Props) => 
         </div>
       </div>
       <div className="flex flex-col space-y-4">
-        <div className="flex flex-row items-center space-x-3 px-4">
-          <img className="h-14 w-14" alt="user" src={avatar} />
-          <p className="text-xl font-semibold">{username}</p>
-        </div>
+        <div className="flex flex-row items-center space-x-3 px-4">{BottomContent}</div>
       </div>
     </div>
   );

@@ -7,11 +7,11 @@ import { Router } from "types";
 
 interface Props {
   appLogo: string;
-  avatar: string;
   routes: Router[];
+  BottomContent?: React.ReactNode;
 }
 
-export const SmallSidebarContent = ({ avatar, appLogo, routes }: Props) => {
+export const SmallSidebarContent = ({ appLogo, routes, BottomContent }: Props) => {
   const { setSidebarState } = useSidebar();
   return (
     <div className="flex h-full flex-col justify-between py-6 px-3">
@@ -48,9 +48,7 @@ export const SmallSidebarContent = ({ avatar, appLogo, routes }: Props) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col items-center space-y-4">
-        <img className="h-14 w-14" alt="avatar" src={avatar} />
-      </div>
+      <div className="flex flex-col items-center space-y-4">{BottomContent}</div>
     </div>
   );
 };

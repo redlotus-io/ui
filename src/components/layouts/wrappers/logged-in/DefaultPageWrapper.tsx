@@ -46,6 +46,7 @@ const NavbarBottomContent = () => {
 export const DefaultPageWrapper = ({ children, RightSide }: Props) => {
   const appLogo = "/icons/android-chrome-512x512.png";
   const avatar = "/general/avatar.svg";
+  const username = "Galaxy";
 
   return (
     <PartialPageWrapper
@@ -53,7 +54,7 @@ export const DefaultPageWrapper = ({ children, RightSide }: Props) => {
         <>
           <NavbarTop
             title="Template"
-            user={{ id: "1", username: "Galaxy", email: "galaxy@gmail.com", avatar: null }}
+            user={{ id: "1", username, email: "galaxy@gmail.com", avatar: null }}
           />
           <div className="px-4">{children}</div>
           <NavbarBottom>
@@ -67,12 +68,24 @@ export const DefaultPageWrapper = ({ children, RightSide }: Props) => {
             <ExpandedSidebarContent
               routes={routes}
               appLogo={appLogo}
-              username="Galaxy"
-              avatar={avatar}
+              BottomContent={
+                <>
+                  <img className="h-14 w-14" alt="user" src={avatar} />
+                  <p className="text-xl font-semibold">{username}</p>
+                </>
+              }
             />
           }
           SmallSidebarContent={
-            <SmallSidebarContent routes={routes} avatar={avatar} appLogo={appLogo} />
+            <SmallSidebarContent
+              routes={routes}
+              appLogo={appLogo}
+              BottomContent={
+                <>
+                  <img className="h-14 w-14" alt="avatar" src={avatar} />
+                </>
+              }
+            />
           }
         />
       }
