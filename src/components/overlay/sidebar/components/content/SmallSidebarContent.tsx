@@ -3,14 +3,15 @@ import { HiMenu } from "react-icons/all";
 
 import { AnimationWrapper, animations, SidebarIconLink } from "components";
 import { useSidebar } from "context";
-import { routes } from "routes";
+import { Router } from "types";
 
 interface Props {
   appLogo: string;
   avatar: string;
+  routes: Router[];
 }
 
-export const SmallSidebarContent = ({ avatar, appLogo }: Props) => {
+export const SmallSidebarContent = ({ avatar, appLogo, routes }: Props) => {
   const { setSidebarState } = useSidebar();
   return (
     <div className="flex h-full flex-col justify-between py-6 px-3">

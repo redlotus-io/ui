@@ -11,6 +11,7 @@ import {
   AnimationWrapper,
   animations,
 } from "components";
+import { routes } from "routes";
 
 interface Props {
   children: React.ReactNode;
@@ -63,9 +64,16 @@ export const DefaultPageWrapper = ({ children, RightSide }: Props) => {
       Sidebar={
         <Sidebar
           ExpandedSidebarContent={
-            <ExpandedSidebarContent appLogo={appLogo} username="Galaxy" avatar={avatar} />
+            <ExpandedSidebarContent
+              routes={routes}
+              appLogo={appLogo}
+              username="Galaxy"
+              avatar={avatar}
+            />
           }
-          SmallSidebarContent={<SmallSidebarContent avatar={avatar} appLogo={appLogo} />}
+          SmallSidebarContent={
+            <SmallSidebarContent routes={routes} avatar={avatar} appLogo={appLogo} />
+          }
         />
       }
       RightSide={RightSide}

@@ -3,11 +3,13 @@ import { HiX } from "react-icons/all";
 import { AnimationWrapper, SidebarLink, animations } from "components";
 import { useSidebar } from "context";
 import { routes } from "routes";
+import { Router } from "types";
 
 interface Props {
   appLogo: string;
   username: string;
   avatar: string;
+  routes: Router[];
 }
 
 export const ExpandedSidebarContent = ({ appLogo, username, avatar }: Props) => {
