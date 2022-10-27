@@ -43,6 +43,9 @@ const NavbarBottomContent = () => {
 };
 
 export const DefaultPageWrapper = ({ children, RightSide }: Props) => {
+  const appLogo = "/icons/android-chrome-512x512.png";
+  const avatar = "/general/avatar.svg";
+
   return (
     <PartialPageWrapper
       MobileContent={
@@ -59,8 +62,10 @@ export const DefaultPageWrapper = ({ children, RightSide }: Props) => {
       }
       Sidebar={
         <Sidebar
-          ExpandedSidebarContent={<ExpandedSidebarContent />}
-          SmallSidebarContent={<SmallSidebarContent />}
+          ExpandedSidebarContent={
+            <ExpandedSidebarContent appLogo={appLogo} username="Galaxy" avatar={avatar} />
+          }
+          SmallSidebarContent={<SmallSidebarContent avatar={avatar} appLogo={appLogo} />}
         />
       }
       RightSide={RightSide}
