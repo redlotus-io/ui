@@ -39,9 +39,7 @@ export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props
           ))}
         </div>
       </div>
-      <div className="flex flex-col space-y-4">
-        <div className="flex flex-row items-center space-x-3 px-4">{BottomContent}</div>
-      </div>
+      <div className="flex flex-col space-y-4">{BottomContent}</div>
     </div>
   );
 };
