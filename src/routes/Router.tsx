@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { HomePage } from "pages";
+import { routes } from ".";
 
 export const Router = () => {
   const root = document.documentElement;
@@ -16,9 +16,9 @@ export const Router = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/1" element={<HomePage />} />
-      <Route path="/2" element={<HomePage />} />
+      {routes.map(route => (
+        <Route path={route.to} element={route.element} />
+      ))}
     </Routes>
   );
 };
