@@ -29,6 +29,12 @@ export const ExpandedSidebarContent = () => {
           <SidebarLink to="/" icon={<HiHome className="mr-3 h-8 w-8 fill-inherit" />}>
             Home
           </SidebarLink>
+          <SidebarLink to="/1" icon={<HiHome className="mr-3 h-8 w-8 fill-inherit" />}>
+            Test
+          </SidebarLink>
+          <SidebarLink to="/2" icon={<HiHome className="mr-3 h-8 w-8 fill-inherit" />}>
+            Super long route name
+          </SidebarLink>
         </div>
       </div>
       <div className="flex flex-col space-y-4">

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { HiMenu, HiHome } from "react-icons/all";
+import { HiMenu, HiHome, HiArchive, HiAcademicCap } from "react-icons/all";
 
 import { AnimationWrapper, animations, SidebarIconLink } from "components";
 import { useSidebar } from "context";
@@ -35,6 +35,16 @@ export const SmallSidebarContent = () => {
             to="/"
             tooltip="home"
             icon={<HiHome className="h-8 w-8 fill-inherit" />}
+          />
+          <SidebarIconLink
+            to="/1"
+            tooltip="test1"
+            icon={<HiArchive className="h-8 w-8 fill-inherit" />}
+          />
+          <SidebarIconLink
+            to="/2"
+            tooltip="test2"
+            icon={<HiAcademicCap className="h-8 w-8 fill-inherit" />}
           />
         </div>
       </div>
