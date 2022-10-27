@@ -52,7 +52,7 @@ export const SidebarIconLink = ({ children, to, icon, tooltip, ...props }: Props
   return (
     <div role="button" tabIndex={0} className="z-[998]" {...props}>
       {to ? (
-        <NavLink to={to}>
+        <NavLink to={to} end>
           {({ isActive }) => (
             <Content icon={icon} tooltip={tooltip} isActive={isActive}>
               {children}
