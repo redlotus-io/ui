@@ -1,11 +1,7 @@
 name: redlotusui
 on:
-  push:
-    branches:
-      - main
-# on:
-#   release:
-#     types: [created]
+  release:
+    types: [created]
 jobs:
   # build:
   #   runs-on: ubuntu-latest
