@@ -62,7 +62,7 @@ export const SidebarLink = ({ children, to, icon, ...props }: Props) => {
       {...props}
     >
       {to ? (
-        <NavLink to={to}>
+        <NavLink to={to} end>
           {({ isActive }) => (
             <Content icon={icon} isActive={isActive}>
               {children}
