@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomimarkus991/lotusui.git"
+    "url": "git+https://github.com/redlotus-io/ui"
   },
   "keywords": [
     "react",
@@ -35,9 +35,9 @@
   "author": "Tomi Markus Alber",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tomimarkus991/lotusui/issues"
+    "url": "https://github.com/redlotus-io/ui/issues"
   },
-  "homepage": "https://github.com/tomimarkus991/lotusui#readme",
+  "homepage": "https://github.com/redlotus-io/ui#readme",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
