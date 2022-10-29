@@ -104,7 +104,7 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
               stiffness: 150,
             },
           }}
-          className={clsx("fixed top-0 flex h-[100vh] w-72 flex-col bg-white shadow-lg")}
+          className={clsx("fixed top-0 z-[1200] flex h-[100vh] w-72 flex-col bg-white shadow-lg")}
         >
           {ExpandedSidebarContent}
         </AnimationWrapper>
