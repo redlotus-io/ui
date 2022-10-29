@@ -18,7 +18,12 @@ interface Props {
 
 export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent }: Props) => {
   const { isMobile } = useIsMobile();
-  const { sidebarState } = useSidebar();
+  const { sidebarState, prevSidebarState } = useSidebar();
+  console.log("prevSidebarState", prevSidebarState);
+  console.log("sidebarState", sidebarState);
+
+  console.log("-------------------");
+
   return (
     <>
       {isMobile ? (
@@ -27,7 +32,7 @@ export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent
             id="main-content"
             className={clsx(
               "flex min-h-screen min-w-full justify-center bg-slate-50",
-              sidebarState === "openWithOverlay" && "h-[100vh] overflow-hidden"
+              sidebarState === "openWithOverlay" && "h-full overflow-hidden"
             )}
           >
             <div className="flex h-full w-full flex-col">{MobileContent}</div>
@@ -40,7 +45,9 @@ export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent
           <div
             className={clsx(
               "w-full py-8 px-6",
-              sidebarState === "expanded" || sidebarState === "closed" ? "ml-24" : "ml-0"
+              (sidebarState === "expanded" ||
+                (sidebarState === "closed" && prevSidebarState === "expanded")) &&
+                "ml-[6.5rem]"
             )}
           >
             {children}

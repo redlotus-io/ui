@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props) => {
-  const { setSidebarState } = useSidebar();
+  const { setSidebarState, setPrevSidebarState } = useSidebar();
 
   return (
     <div className="flex h-full flex-col justify-between py-6 px-3">
@@ -20,7 +20,12 @@ export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props
           <div className="min-h-[3.5rem] min-w-[3.5rem]">
             <img className="h-14 w-14" src={appLogo} alt="icon" />
           </div>
-          <button className="md:hidden" onClick={() => setSidebarState("closed")}>
+          <button
+            className="md:hidden"
+            onClick={() => {
+              setSidebarState("closed");
+            }}
+          >
             <AnimationWrapper keyIndex="sidebar-x-icon" variants={animations.scaleAndRotation}>
               <HiX className="h-12 w-12 fill-slate-700 hover:fill-slate-800" />
             </AnimationWrapper>
@@ -28,6 +33,7 @@ export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props
           <button
             className="hidden md:block"
             onClick={() => {
+              setPrevSidebarState("expanded");
               setSidebarState("closed");
               setTimeout(() => {
                 setSidebarState("small");

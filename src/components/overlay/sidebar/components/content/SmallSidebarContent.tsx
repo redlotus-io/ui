@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const SmallSidebarContent = ({ appLogo, routes, BottomContent }: Props) => {
-  const { setSidebarState } = useSidebar();
+  const { setSidebarState, setPrevSidebarState } = useSidebar();
   return (
     <div className="flex h-full flex-col justify-between py-6 px-3">
       <div className={clsx("flex flex-col items-center justify-center")}>
@@ -22,7 +22,9 @@ export const SmallSidebarContent = ({ appLogo, routes, BottomContent }: Props) =
         <div className="mt-6 mb-4">
           <button
             className="rounded-md p-3 hover:bg-slate-100 lg:hidden"
-            onClick={() => setSidebarState("openWithOverlay")}
+            onClick={() => {
+              setSidebarState("openWithOverlay");
+            }}
           >
             <AnimationWrapper keyIndex="sidebar-x-icon" variants={animations.smallScale}>
               <HiMenu className="h-7 w-7 fill-slate-700 hover:fill-slate-800" />
@@ -30,7 +32,13 @@ export const SmallSidebarContent = ({ appLogo, routes, BottomContent }: Props) =
           </button>
           <button
             className="rounded-md p-3 hover:bg-slate-100 md:hidden lg:block"
-            onClick={() => setSidebarState("expanded")}
+            onClick={() => {
+              setPrevSidebarState("small");
+              setSidebarState("closed");
+              setTimeout(() => {
+                setSidebarState("expanded");
+              }, 250);
+            }}
           >
             <AnimationWrapper keyIndex="sidebar-x-icon" variants={animations.smallScale}>
               <HiMenu className="h-7 w-7 fill-slate-700 hover:fill-slate-800" />
