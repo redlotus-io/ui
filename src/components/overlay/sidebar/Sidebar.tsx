@@ -85,10 +85,9 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
         <AnimationWrapper
           keyIndex="expanded-app-sidebar-content"
           animateOnAllScreens
-          initial={{ x: routeChanged ? "-10vw" : "0vw", opacity: routeChanged ? 0 : 1 }}
+          initial={{ x: routeChanged ? "-10vw" : "0vw" }}
           animate={{
             x: "0vw",
-            opacity: 1,
             transition: {
               type: "spring",
               damping: 30,
@@ -97,14 +96,15 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
           }}
           exit={{
             x: "-25vw",
-            opacity: 1,
             transition: {
               type: "spring",
               damping: 30,
               stiffness: 150,
             },
           }}
-          className={clsx("fixed top-0 z-[1200] flex h-[100vh] w-72 flex-col bg-white shadow-lg")}
+          className={clsx(
+            "fixed top-0 z-[1200] flex h-[100vh] w-72 flex-col bg-white shadow-lg mr-24"
+          )}
         >
           {ExpandedSidebarContent}
         </AnimationWrapper>

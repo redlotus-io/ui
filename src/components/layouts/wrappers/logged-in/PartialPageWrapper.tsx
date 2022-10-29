@@ -37,7 +37,14 @@ export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent
       ) : (
         <div id="main-content" className="flex min-h-screen w-full bg-slate-50">
           <div className="flex justify-start">{Sidebar}</div>
-          <div className="w-full py-8 px-6">{children}</div>
+          <div
+            className={clsx(
+              "w-full py-8 px-6",
+              sidebarState === "expanded" || sidebarState === "closed" ? "ml-24" : "ml-0"
+            )}
+          >
+            {children}
+          </div>
           {RightSide && (
             <div className="hidden min-w-[20rem] flex-col items-center py-8 px-4 xl:flex 2xl:min-w-[24rem]">
               {RightSide}

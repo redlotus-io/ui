@@ -10,7 +10,7 @@ export const HomePage = () => {
       }
     >
       <div>
-        <p>Hello</p>
+        <p>Lorem ipsum 123456789 tere mis component siin on</p>
       </div>
     </DefaultPageWrapper>
   );
