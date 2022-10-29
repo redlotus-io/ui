@@ -19,10 +19,6 @@ interface Props {
 export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent }: Props) => {
   const { isMobile } = useIsMobile();
   const { sidebarState, prevSidebarState } = useSidebar();
-  console.log("prevSidebarState", prevSidebarState);
-  console.log("sidebarState", sidebarState);
-
-  console.log("-------------------");
 
   return (
     <>
@@ -52,11 +48,7 @@ export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent
           >
             {children}
           </div>
-          {RightSide && (
-            <div className="hidden min-w-[20rem] flex-col items-center py-8 px-4 xl:flex 2xl:min-w-[24rem]">
-              {RightSide}
-            </div>
-          )}
+          {RightSide && <>{RightSide}</>}
         </div>
       )}
     </>
