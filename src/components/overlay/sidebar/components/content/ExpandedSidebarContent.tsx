@@ -25,7 +25,15 @@ export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props
               <HiX className="h-12 w-12 fill-slate-700 hover:fill-slate-800" />
             </AnimationWrapper>
           </button>
-          <button className="hidden md:block" onClick={() => setSidebarState("small")}>
+          <button
+            className="hidden md:block"
+            onClick={() => {
+              setSidebarState("closed");
+              setTimeout(() => {
+                setSidebarState("small");
+              }, 250);
+            }}
+          >
             <AnimationWrapper keyIndex="sidebar-x-icon" variants={animations.scaleAndRotation}>
               <HiX className="h-12 w-12 fill-slate-700 hover:fill-slate-800" />
             </AnimationWrapper>
