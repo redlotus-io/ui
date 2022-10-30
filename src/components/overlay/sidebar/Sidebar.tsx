@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 import { AnimationWrapper } from "components";
 import { useSidebar } from "context";
-import { useIsMobile } from "hooks";
+import { useIsMobile, useSidebarUtils } from "hooks";
 
 interface Props {
   SmallSidebarContent: ReactNode;
@@ -13,6 +13,8 @@ interface Props {
 }
 
 export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) => {
+  useSidebarUtils();
+
   const { sidebarState, setSidebarState, placement, setPrevSidebarState } = useSidebar();
   const { isMobile } = useIsMobile();
   const location = useLocation();
