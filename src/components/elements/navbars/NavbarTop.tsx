@@ -15,6 +15,7 @@ export const NavbarTop = ({ user, title }: Props) => {
         <p className="text-2xl font-semibold text-gray-800">{title}</p>
         <AnimationWrapper variants={animations.smallScale} keyIndex="nt-user-icon">
           <div
+            id="sidebar-button"
             role="button"
             tabIndex={0}
             className="flex cursor-pointer flex-row items-center"
