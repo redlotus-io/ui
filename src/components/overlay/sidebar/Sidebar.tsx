@@ -42,7 +42,7 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
       {sidebarState === "openWithOverlay" && (
         <>
           <AnimationWrapper
-            id="mobile-sidebar"
+            id="sidebar"
             keyIndex="openWithOverlay-app-sidebar-content"
             animateOnAllScreens
             initial={{ x: placement === "right" ? "40vw" : "-40vw" }}
@@ -68,25 +68,12 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
           >
             {ExpandedSidebarContent}
           </AnimationWrapper>
-
-          <AnimationWrapper
-            keyIndex="openWithOverlay-app-sidebar-overlay"
-            id="overlay"
-            animateOnAllScreens
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 0.5,
-            }}
-            transition={{ duration: 0.4, ease: "linear" }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSidebarState(isMobile ? "closed" : "small")}
-            className="fixed top-0 left-0 z-[1199] h-full w-full bg-gray-500"
-          />
         </>
       )}
       {sidebarState === "expanded" && (
         <>
           <AnimationWrapper
+            id="sidebar"
             keyIndex="expanded-app-sidebar-content"
             animateOnAllScreens
             initial={{ x: routeChanged ? "-10vw" : "0vw" }}
@@ -129,6 +116,7 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
       )}
       {sidebarState === "small" && (
         <AnimationWrapper
+          id="sidebar"
           keyIndex="small-app-sidebar-content"
           animateOnAllScreens
           initial={{
