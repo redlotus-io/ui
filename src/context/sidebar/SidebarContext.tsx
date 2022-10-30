@@ -20,7 +20,7 @@ const initContextData: InitialContextType = {
   placement: "right",
   sidebarState: "closed",
   setSidebarState: () => {},
-  prevSidebarState: "openWithOverlay",
+  prevSidebarState: "closed",
   setPrevSidebarState: () => {},
 };
 
@@ -30,7 +30,7 @@ export const useSidebar = () => useContext(SidebarContext);
 
 export const SidebarProvider = ({ children }: ProviderProps) => {
   const [sidebarState, setSidebarState] = useState<SidebarStateType>("closed");
-  const [prevSidebarState, setPrevSidebarState] = useState<SidebarStateType>("openWithOverlay");
+  const [prevSidebarState, setPrevSidebarState] = useState<SidebarStateType>("closed");
 
   const { isMobile } = useIsMobile();
   const placement: PlacementType = isMobile ? "right" : "left";

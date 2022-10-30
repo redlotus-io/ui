@@ -2,6 +2,7 @@ import { HiX } from "react-icons/all";
 
 import { AnimationWrapper, SidebarLink, animations } from "components";
 import { useSidebar } from "context";
+import { useIsMobile } from "hooks";
 import { Router } from "types";
 
 interface Props {
@@ -12,6 +13,7 @@ interface Props {
 
 export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props) => {
   const { setSidebarState, setPrevSidebarState } = useSidebar();
+  const { isMobile } = useIsMobile();
 
   return (
     <div className="flex h-full flex-col justify-between py-6 px-3">
@@ -46,11 +48,32 @@ export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props
           </button>
         </div>
         <div className="mt-8 h-full space-y-4">
-          {routes.map(({ bigIcon, to, routeName }) => (
-            <SidebarLink key={to} to={to} icon={bigIcon}>
-              {routeName}
-            </SidebarLink>
-          ))}
+          {routes.map(({ bigIcon, to, routeName }) => {
+            return (
+              <>
+                {isMobile ? (
+                  <SidebarLink key={to} to={to} icon={bigIcon}>
+                    {routeName}
+                  </SidebarLink>
+                ) : (
+                  <SidebarLink
+                    key={to}
+                    to={to}
+                    icon={bigIcon}
+                    onClick={() => {
+                      setPrevSidebarState("expanded");
+                      setSidebarState("closed");
+                      setTimeout(() => {
+                        setSidebarState("small");
+                      }, 250);
+                    }}
+                  >
+                    {routeName}
+                  </SidebarLink>
+                )}
+              </>
+            );
+          })}
         </div>
       </div>
       <div className="flex flex-col space-y-4">{BottomContent}</div>

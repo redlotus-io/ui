@@ -1,4 +1,4 @@
-import { HiChartBar, HiHome } from "react-icons/hi";
+import { HiArchive, HiHome } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 import {
@@ -30,13 +30,13 @@ const NavbarBottomContent = () => {
           <HiHome className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
         </AnimationWrapper>
       </Link>
-      <Link to="/stats">
+      <Link to="/about">
         <AnimationWrapper
           variants={animations.smallScale}
           animateOnAllScreens
           keyIndex="nb-chart-icon"
         >
-          <HiChartBar className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
+          <HiArchive className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
         </AnimationWrapper>
       </Link>
     </>

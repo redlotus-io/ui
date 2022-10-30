@@ -17,6 +17,9 @@ module.exports = {
         // xl	1280px
         // 2xl 1536px
       },
+      boxShadow: {
+        top: "20px 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
     },
     fontFamily: {
       varela: ["Varela Round", "sans-serif"],

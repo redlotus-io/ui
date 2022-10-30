@@ -28,7 +28,8 @@ export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent
             id="main-content"
             className={clsx(
               "flex min-h-screen min-w-full justify-center bg-slate-50",
-              sidebarState === "openWithOverlay" && "h-full overflow-hidden"
+              sidebarState === "openWithOverlay" && "h-full overflow-hidden",
+              "py-32 pb-[6.5rem]"
             )}
           >
             <div className="flex h-full w-full flex-col">{MobileContent}</div>
