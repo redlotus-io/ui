@@ -56,18 +56,7 @@ export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props
                     {routeName}
                   </SidebarLink>
                 ) : (
-                  <SidebarLink
-                    key={to}
-                    to={to}
-                    icon={bigIcon}
-                    onClick={() => {
-                      setPrevSidebarState("expanded");
-                      setSidebarState("closed");
-                      setTimeout(() => {
-                        setSidebarState("small");
-                      }, 250);
-                    }}
-                  >
+                  <SidebarLink key={to} to={to} icon={bigIcon}>
                     {routeName}
                   </SidebarLink>
                 )}
