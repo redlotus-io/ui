@@ -28,6 +28,6 @@ export const routes: Router[] = [
     element: <SettingsPage />,
     smallIcon: <HiAnnotation className={clsx(smallIconCss)} />,
     bigIcon: <HiAnnotation className={clsx(bigIconCss)} />,
-    tooltip: "si settings",
+    tooltip: "settings",
   },
 ];
