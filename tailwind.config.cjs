@@ -38,7 +38,8 @@ module.exports = {
     }),
   },
   plugins: [
-    require("tailwind-scrollbar"),
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    require("tailwind-scrollbar")({ nocompatible: true }),
     require("tailwind-scrollbar-hide"),
     require("tailwindcss-border-gradient-radius"),
   ],

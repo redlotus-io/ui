@@ -17,6 +17,10 @@ input[type="number"] {
 }
 
 @layer base {
+  html {
+    @apply scrollbar-thumb-gray-300 hover:scrollbar-thumb-gray-400 scrollbar-track-transparent scrollbar-thin scrollbar-thumb-rounded-full;
+  }
+  
   p {
     @apply text-gray-800;
   }
