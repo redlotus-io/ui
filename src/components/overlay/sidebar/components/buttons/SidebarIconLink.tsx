@@ -34,7 +34,6 @@ const Content = ({ children, icon, tooltip, isActive = false }: ContentProps) =>
       <AnimationWrapper
         variants={animations.smallScale}
         keyIndex="sidebar-link-icon"
-        child
         className={clsx(isActive ? "fill-white" : "fill-gray-800 group-hover:fill-slate-800")}
       >
         {icon}

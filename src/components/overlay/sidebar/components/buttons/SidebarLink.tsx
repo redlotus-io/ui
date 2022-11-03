@@ -32,8 +32,7 @@ const Content = ({ children, icon, isActive }: ContentProps) => {
     >
       <AnimationWrapper
         variants={animations.smallScale}
-        keyIndex="sidebar-link-icon"
-        child
+        keyIndex="sidebar-link"
         className={clsx(
           isActive ? "fill-white" : "fill-gray-800 group-hover:fill-slate-800",
           "flex items-center"

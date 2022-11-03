@@ -9,7 +9,6 @@ interface Props {
    * @default false
    */
   animateOnAllScreens?: boolean;
-  child?: boolean;
   keyIndex: string;
 }
 
@@ -20,7 +19,6 @@ export const AnimationWrapper = ({
   animateOnAllScreens = false,
   variants,
   keyIndex,
-  child = false,
   ...props
 }: IProps) => {
   const { isMobile } = useIsMobile();
@@ -40,12 +38,12 @@ export const AnimationWrapper = ({
   return (
     <motion.div
       key={keyIndex}
-      initial={child ? undefined : "initial"}
-      animate={child ? undefined : "animate"}
-      exit={child ? undefined : "exit"}
-      whileHover={child ? undefined : "whileHover"}
-      whileTap={child ? undefined : "whileTap"}
-      variants={child ? variants : animations}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      whileHover="whileHover"
+      whileTap="whileTap"
+      variants={animations}
       {...props}
     >
       {children}
