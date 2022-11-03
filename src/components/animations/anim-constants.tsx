@@ -204,30 +204,6 @@ const button: Variants = {
   },
 };
 
-const extendedSidebar: Variants = {
-  initial: { x: "-10vw", opacity: 0 },
-  animate: {
-    x: "0vw",
-    opacity: 1,
-    transition: {
-      duration: 3,
-      type: "spring",
-      damping: 30,
-      stiffness: 300,
-    },
-  },
-  exit: {
-    x: "-100vw",
-    opacity: 0,
-    transition: {
-      duration: 4,
-      type: "spring",
-      damping: 30,
-      stiffness: 300,
-    },
-  },
-};
-
 export const animations = {
   scaleAndRotation,
   scaleAndFullRotation,
@@ -242,8 +218,4 @@ export const animations = {
   smallScale,
   smallScaleXs,
   button,
-};
-
-export const sidebarAnimations = {
-  extendedSidebar,
 };
