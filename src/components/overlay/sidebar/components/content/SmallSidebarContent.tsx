@@ -21,7 +21,7 @@ export const SmallSidebarContent = ({ appLogo, routes, BottomContent }: Props) =
         </div>
         <div className="mt-6 mb-4">
           <button className="rounded-md p-3 hover:bg-slate-100 mt-6 mb-4" onClick={modifyOnClick}>
-            <AnimationWrapper keyIndex="small-sidebar-x-icon" variants={animations.smallScale}>
+            <AnimationWrapper key="small-sidebar-x-icon" variants={animations.smallScale}>
               <HiMenu className="h-7 w-7 fill-slate-700 hover:fill-slate-800" />
             </AnimationWrapper>
           </button>

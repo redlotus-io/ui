@@ -5,13 +5,13 @@ import { useIsMobile } from "hooks";
 type ProviderProps = {
   children: React.ReactNode;
 };
-type PlacementType = "left" | "right";
-type SidebarStateType = "closed" | "expanded" | "small" | "openWithOverlay";
+export type SidebarPlacementType = "left" | "right";
+type SidebarStateType = "closed" | "expanded" | "small" | "mobile";
 
 type InitialContextType = {
   sidebarState: SidebarStateType;
   setSidebarState: Dispatch<SetStateAction<SidebarStateType>>;
-  placement: PlacementType;
+  placement: SidebarPlacementType;
   prevSidebarState: SidebarStateType;
   setPrevSidebarState: Dispatch<SetStateAction<SidebarStateType>>;
 };
@@ -33,7 +33,7 @@ export const SidebarProvider = ({ children }: ProviderProps) => {
   const [prevSidebarState, setPrevSidebarState] = useState<SidebarStateType>("closed");
 
   const { isMobile } = useIsMobile();
-  const placement: PlacementType = isMobile ? "right" : "left";
+  const placement: SidebarPlacementType = isMobile ? "right" : "left";
 
   return (
     <SidebarContext.Provider

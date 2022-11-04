@@ -22,12 +22,12 @@ const NavbarBottomContent = () => {
   return (
     <>
       <Link to="/">
-        <AnimationWrapper variants={animations.smallScale} keyIndex="nb-home-icon">
+        <AnimationWrapper variants={animations.smallScale} key="nb-home-icon">
           <HiHome className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
         </AnimationWrapper>
       </Link>
       <Link to="/about">
-        <AnimationWrapper variants={animations.smallScale} keyIndex="nb-chart-icon">
+        <AnimationWrapper variants={animations.smallScale} key="nb-chart-icon">
           <HiArchive className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
         </AnimationWrapper>
       </Link>

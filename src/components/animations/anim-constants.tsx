@@ -1,5 +1,7 @@
 import { Variants } from "framer-motion";
 
+import { SidebarPlacementType } from "context";
+
 const flyInFromTop: Variants = {
   initial: { opacity: 0, y: -100 },
   animate: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } },
@@ -204,6 +206,49 @@ const button: Variants = {
   },
 };
 
+const content: Variants = {
+  initial: { opacity: 0.8 },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      ease: "easeIn",
+    },
+  },
+  exit: {
+    opacity: 0.6,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
+const mobile = (placement: SidebarPlacementType) => {
+  return {
+    initial: { x: placement === "right" ? "15rem" : "-14rem" },
+    animate: {
+      x: 0,
+      transition: {
+        type: "just",
+        duration: 0.5,
+      },
+    },
+    exit: {
+      x: placement === "right" ? "16rem" : "-16rem",
+      transition: {
+        type: "just",
+        duration: 0.4,
+      },
+      opacity: 1,
+    },
+  } as Variants;
+};
+
+const sidebar = {
+  content,
+  mobile,
+};
+
 export const animations = {
   scaleAndRotation,
   scaleAndFullRotation,
@@ -218,4 +263,5 @@ export const animations = {
   smallScale,
   smallScaleXs,
   button,
+  sidebar,
 };

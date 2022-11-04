@@ -49,7 +49,7 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <AnimationWrapper keyIndex="regular-button" variants={animations.button}>
+    <AnimationWrapper key="regular-button" variants={animations.button}>
       <button
         type={type}
         className={clsx(

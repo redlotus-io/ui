@@ -38,7 +38,7 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
             onClose={setOpen}
           >
             <AnimationWrapper
-              keyIndex="app-modal-overlay"
+              key="app-modal-overlay"
               id="overlay"
               variants={animations.overlay}
               onClick={() => setOpen(false)}
@@ -50,7 +50,7 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
               className="absolute inset-0 hidden"
             />
             <AnimationWrapper
-              keyIndex="app-modal-children"
+              key="app-modal-children"
               id="modal-children"
               variants={animations.modalEffect}
               className={clsx(

@@ -8,8 +8,8 @@ interface Props {
    * @description Set false if you don't want to use animation on mobile
    * @default true
    */
+  child?: boolean;
   animateOnMobile?: boolean;
-  keyIndex: string;
 }
 
 type IProps = Props & HTMLMotionProps<"div">;
@@ -18,7 +18,7 @@ export const AnimationWrapper = ({
   children,
   animateOnMobile = true,
   variants,
-  keyIndex,
+  child = false,
   ...props
 }: IProps) => {
   const { isMobile } = useIsMobile();
@@ -31,12 +31,11 @@ export const AnimationWrapper = ({
 
   return (
     <motion.div
-      key={keyIndex}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      whileHover="whileHover"
-      whileTap="whileTap"
+      initial={child ? undefined : "initial"}
+      animate={child ? undefined : "animate"}
+      exit={child ? undefined : "exit"}
+      whileHover={child ? undefined : "whileHover"}
+      whileTap={child ? undefined : "whileTap"}
       variants={variants}
       {...props}
     >

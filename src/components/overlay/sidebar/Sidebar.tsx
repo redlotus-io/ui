@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { useEffect, ReactNode } from "react";
 
-import { AnimationWrapper } from "components";
+import { animations, AnimationWrapper } from "components";
 import { useSidebar } from "context";
 import { useIsMobile, useModifySidebarBasedOnDevice, useSidebarUtils } from "hooks";
 
@@ -23,45 +23,28 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMobile]);
 
-  console.log("sidebarState", sidebarState);
-
   return (
     <AnimatePresence initial={false}>
-      {sidebarState === "openWithOverlay" && (
+      {sidebarState === "mobile" && (
         <AnimationWrapper
           id="sidebar"
-          keyIndex="openWithOverlay-app-sidebar-wrapper"
-          initial={{ x: placement === "right" ? "40vw" : "-40vw" }}
-          animate={{
-            x: "0",
-            transition: {
-              type: "spring",
-              damping: 30,
-              stiffness: 150,
-              duration: 0.5,
-            },
-          }}
-          exit={{
-            x: placement === "right" ? "25vw" : "-25vw",
-            transition: {
-              ease: "easeOut",
-              duration: 0.2,
-            },
-            opacity: 0,
-          }}
+          key="mobile-app-sidebar-wrapper"
+          variants={animations.sidebar.mobile(placement)}
           className={clsx(
-            "fixed top-0 z-[1200] flex h-full w-80 flex-col bg-white",
+            "fixed top-0 z-[1200] flex h-full w-64 flex-col bg-white",
             placement === "right" ? "right-0" : "left-0"
           )}
         >
-          {ExpandedSidebarContent}
+          <div className="flex h-full flex-col justify-between py-6 px-3">
+            {ExpandedSidebarContent}
+          </div>
         </AnimationWrapper>
       )}
 
       {(sidebarState === "expanded" || sidebarState === "small") && (
         <AnimationWrapper
           id="sidebar"
-          keyIndex="app-sidebar-expanded-small-wrapper"
+          key="app-sidebar-expanded-small-wrapper"
           className={clsx(
             "top-8 flex h-[94vh] rounded-xl bg-white shadow-lg flex-col ml-2 z-[1200] fixed"
           )}
@@ -76,49 +59,23 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
         >
           <AnimatePresence mode="wait" initial={false}>
             {sidebarState === "expanded" ? (
-              <motion.div
+              <AnimationWrapper
                 id="sidebar"
                 className="flex h-full flex-col justify-between py-6 px-3"
-                key="extended-app-sidebar-content-44"
-                initial={{ opacity: 0.8 }}
-                animate={{
-                  opacity: 1,
-                  transition: {
-                    duration: 0.2,
-                    ease: "easeIn",
-                  },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: {
-                    duration: 0.3,
-                  },
-                }}
+                key="extended-app-sidebar-content"
+                variants={animations.sidebar.content}
               >
                 {ExpandedSidebarContent}
-              </motion.div>
+              </AnimationWrapper>
             ) : (
-              <motion.div
+              <AnimationWrapper
                 id="sidebar"
+                key="small-app-sidebar-content"
                 className="flex h-full flex-col justify-between items-start pr-3 py-6 pl-5"
-                key="small-app-sidebar-content-44"
-                initial={{ opacity: 0.8 }}
-                animate={{
-                  opacity: 1,
-                  transition: {
-                    duration: 0.3,
-                    ease: "easeIn",
-                  },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: {
-                    duration: 0.25,
-                  },
-                }}
+                variants={animations.sidebar.content}
               >
                 {SmallSidebarContent}
-              </motion.div>
+              </AnimationWrapper>
             )}
           </AnimatePresence>
         </AnimationWrapper>

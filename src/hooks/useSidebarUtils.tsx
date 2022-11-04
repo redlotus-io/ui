@@ -18,14 +18,14 @@ export const useSidebarUtils = () => {
 
       if (
         (sidebarState === "expanded" && target !== sidebar && !sidebar?.contains(target)) ||
-        (sidebarState === "openWithOverlay" &&
+        (sidebarState === "mobile" &&
           target !== sidebar &&
           !sidebar?.contains(target) &&
           target !== sidebarButton &&
           !sidebarButton?.contains(target))
       ) {
         if (isMobile) {
-          setPrevSidebarState("openWithOverlay");
+          setPrevSidebarState("mobile");
           setSidebarState("closed");
         } else {
           // when sidebar is expanded and click is not on sidebar, close the sidebar to small
@@ -44,7 +44,7 @@ export const useModifySidebarBasedOnDevice = () => {
   const { isMobile } = useIsMobile();
   const modifyBasedOnDevice = () => {
     if (isMobile) {
-      setPrevSidebarState("openWithOverlay");
+      setPrevSidebarState("mobile");
       setSidebarState("closed");
     } else {
       if (sidebarState === "expanded") {
@@ -59,7 +59,7 @@ export const useModifySidebarBasedOnDevice = () => {
 
   const modifyOnClick = () => {
     if (isMobile) {
-      setPrevSidebarState("openWithOverlay");
+      setPrevSidebarState("mobile");
       setSidebarState("closed");
     } else {
       // timeout to allow the sidebar to finish animation

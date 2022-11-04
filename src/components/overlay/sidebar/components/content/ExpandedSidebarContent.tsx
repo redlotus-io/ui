@@ -22,10 +22,7 @@ export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props
             <img className="h-14 w-14" src={appLogo} alt="icon" />
           </div>
           <button onClick={modifyOnClick}>
-            <AnimationWrapper
-              keyIndex="expanded-sidebar-x-icon"
-              variants={animations.scaleAndRotation}
-            >
+            <AnimationWrapper key="expanded-sidebar-x-icon" variants={animations.scaleAndRotation}>
               <HiX className="h-12 w-12 fill-slate-700 hover:fill-slate-800" />
             </AnimationWrapper>
           </button>
