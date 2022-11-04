@@ -41,7 +41,6 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
               keyIndex="app-modal-overlay"
               id="overlay"
               variants={animations.overlay}
-              animateOnAllScreens
               onClick={() => setOpen(false)}
               className="absolute inset-0 h-full w-full bg-gray-500 opacity-40"
             />
@@ -54,7 +53,6 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
               keyIndex="app-modal-children"
               id="modal-children"
               variants={animations.modalEffect}
-              animateOnAllScreens
               className={clsx(
                 modalMaxWidth[maxWidth],
                 "min:min-w-[20rem] z-[1020] min-w-[95%] max-w-[94%] rounded-xl bg-white"

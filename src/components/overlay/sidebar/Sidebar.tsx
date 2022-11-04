@@ -31,7 +31,6 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
         <AnimationWrapper
           id="sidebar"
           keyIndex="openWithOverlay-app-sidebar-wrapper"
-          animateOnAllScreens
           initial={{ x: placement === "right" ? "40vw" : "-40vw" }}
           animate={{
             x: "0",
@@ -63,7 +62,6 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
         <AnimationWrapper
           id="sidebar"
           keyIndex="app-sidebar-expanded-small-wrapper"
-          animateOnAllScreens
           className={clsx(
             "top-8 flex h-[94vh] rounded-xl bg-white shadow-lg flex-col ml-2 z-[1200] fixed"
           )}
