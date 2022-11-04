@@ -13,7 +13,7 @@ export const NavbarTop = ({ user, title }: Props) => {
     <div className="mx-auto inset-x-0 my-2 fixed top-0 z-[1020] flex h-16 rounded-md drop-shadow-lg shadow-inner items-center w-[95%] bg-slate-50 py-12">
       <div className="flex flex-1 items-center justify-between px-4">
         <p className="text-2xl font-semibold text-gray-800">{title}</p>
-        <AnimationWrapper variants={animations.smallScale} keyIndex="nt-user-icon">
+        <AnimationWrapper variants={animations.smallScale} key="nt-user-icon">
           <div
             id="sidebar-button"
             role="button"
@@ -21,7 +21,7 @@ export const NavbarTop = ({ user, title }: Props) => {
             className="flex cursor-pointer flex-row items-center"
             onClick={() => {
               setPrevSidebarState("closed");
-              setSidebarState("openWithOverlay");
+              setSidebarState("mobile");
             }}
           >
             {user.avatar ? (

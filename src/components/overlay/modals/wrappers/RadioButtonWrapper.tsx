@@ -12,7 +12,7 @@ interface Props {
 export const RadioButtonWrapper = ({ children, setOpen, checked, index }: Props) => {
   return (
     <AnimationWrapper
-      keyIndex={index}
+      key={index}
       variants={animations.makeBiggerAndRotateSlightly}
       className={clsx(
         "scrollbar-hide",

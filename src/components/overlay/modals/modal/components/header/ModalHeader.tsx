@@ -14,7 +14,7 @@ export const ModalHeader = ({ children, setOpen, type }: Props) => {
     <ModalHeaderContainer>
       {type === "back" ? (
         <div role="button" tabIndex={0} onClick={() => setOpen(false)}>
-          <AnimationWrapper keyIndex="modal-header-left-arrow-icon" variants={animations.rotate360}>
+          <AnimationWrapper key="modal-header-left-arrow-icon" variants={animations.rotate360}>
             <HiArrowLeft className="h-8 w-8 fill-slate-700 hover:fill-slate-800" />
           </AnimationWrapper>
         </div>
@@ -25,7 +25,7 @@ export const ModalHeader = ({ children, setOpen, type }: Props) => {
       <ModalTitle>{children}</ModalTitle>
       {type === "close" ? (
         <div role="button" tabIndex={0} onClick={() => setOpen(false)}>
-          <AnimationWrapper keyIndex="modal-header-x-icon" variants={animations.rotate360}>
+          <AnimationWrapper key="modal-header-x-icon" variants={animations.rotate360}>
             <HiX className="h-8 w-8 fill-slate-700 hover:fill-slate-800" />
           </AnimationWrapper>
         </div>

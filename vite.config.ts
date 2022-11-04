@@ -11,6 +11,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), checker({ typescript: true })],
+  // @ts-ignore
   test: {
     globals: true,
     environment: "jsdom",

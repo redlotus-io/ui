@@ -32,7 +32,7 @@ const Content = ({ children, icon, isActive }: ContentProps) => {
     >
       <AnimationWrapper
         variants={animations.smallScale}
-        keyIndex="sidebar-link-icon"
+        key="sidebar-link"
         child
         className={clsx(
           isActive ? "fill-white" : "fill-gray-800 group-hover:fill-slate-800",
@@ -55,7 +55,7 @@ export const SidebarLink = ({ children, to, icon, ...props }: Props) => {
       role="button"
       tabIndex={0}
       onClick={() => {
-        if (sidebarState === "openWithOverlay") {
+        if (sidebarState === "mobile") {
           setSidebarState("closed");
         }
       }}

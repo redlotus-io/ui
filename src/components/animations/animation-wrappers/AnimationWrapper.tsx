@@ -5,47 +5,38 @@ import { useIsMobile } from "hooks";
 interface Props {
   children?: React.ReactNode;
   /**
-   * @description Set true if you want to use animation on all screens
-   * @default false
+   * @description Set false if you don't want to use animation on mobile
+   * @default true
    */
-  animateOnAllScreens?: boolean;
   child?: boolean;
-  keyIndex: string;
+  animateOnMobile?: boolean;
 }
 
 type IProps = Props & HTMLMotionProps<"div">;
 
 export const AnimationWrapper = ({
   children,
-  animateOnAllScreens = false,
+  animateOnMobile = true,
   variants,
-  keyIndex,
   child = false,
   ...props
 }: IProps) => {
   const { isMobile } = useIsMobile();
 
-  let animations;
-  // when settings are overridden (we want animations to be applied on all screens)
-  if (animateOnAllScreens) {
-    animations = variants;
-    // when user is on mobile
-  } else if (isMobile) {
-    animations = {};
-    // when user is not on mobile
-  } else if (!isMobile) {
-    animations = variants;
+  if (!animateOnMobile && isMobile) {
+    <motion.div variants={{}} {...props}>
+      {children}
+    </motion.div>;
   }
 
   return (
     <motion.div
-      key={keyIndex}
       initial={child ? undefined : "initial"}
       animate={child ? undefined : "animate"}
       exit={child ? undefined : "exit"}
       whileHover={child ? undefined : "whileHover"}
       whileTap={child ? undefined : "whileTap"}
-      variants={child ? variants : animations}
+      variants={variants}
       {...props}
     >
       {children}
