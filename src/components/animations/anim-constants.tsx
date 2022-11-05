@@ -122,12 +122,13 @@ const modalEffect: Variants = {
   },
 };
 
-const popOverEffect: Variants = {
-  initial: { opacity: 0, scale: 0.2, translateY: 5 },
+const popoverEffect: Variants = {
+  initial: { opacity: 0, scale: 0.2, y: 0, x: -30 },
   animate: {
     scale: 1,
     opacity: 1,
-    translateY: 0,
+    translateY: 20,
+    translateX: "0%",
     transition: {
       duration: 0.15,
       ease: "easeIn",
@@ -253,7 +254,7 @@ export const animations = {
   scaleAndRotation,
   scaleAndFullRotation,
   realButtonEffect,
-  popOverEffect,
+  popoverEffect,
   rotate360,
   rotateInFromLeft,
   springInFromTop,

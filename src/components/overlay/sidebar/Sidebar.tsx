@@ -60,7 +60,6 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
           <AnimatePresence mode="wait" initial={false}>
             {sidebarState === "expanded" ? (
               <AnimationWrapper
-                id="sidebar"
                 className="flex h-full flex-col justify-between py-6 px-3"
                 key="extended-app-sidebar-content"
                 variants={animations.sidebar.content}
@@ -69,7 +68,6 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
               </AnimationWrapper>
             ) : (
               <AnimationWrapper
-                id="sidebar"
                 key="small-app-sidebar-content"
                 className="flex h-full flex-col justify-between items-start pr-3 py-6 pl-5"
                 variants={animations.sidebar.content}

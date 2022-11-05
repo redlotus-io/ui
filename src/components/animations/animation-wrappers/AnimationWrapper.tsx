@@ -23,6 +23,8 @@ export const AnimationWrapper = ({
 }: IProps) => {
   const { isMobile } = useIsMobile();
 
+  // when user is on mobile and you dont want to animate on mobile
+  // return regular div
   if (!animateOnMobile && isMobile) {
     <motion.div variants={{}} {...props}>
       {children}

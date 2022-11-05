@@ -16,7 +16,7 @@ export const ExpandedSidebarContent = ({ appLogo, routes, BottomContent }: Props
 
   return (
     <>
-      <div id="sidebar" className="flex flex-col">
+      <div className="flex flex-col">
         <div className="flex flex-row justify-between px-3">
           <div className="min-h-[3.5rem] min-w-[3.5rem]">
             <img className="h-14 w-14" src={appLogo} alt="icon" />
