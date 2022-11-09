@@ -19,6 +19,7 @@ module.exports = {
       },
       boxShadow: {
         top: "20px 35px 60px -15px rgba(0, 0, 0, 0.3)",
+        notLeft: "3px 3px 5px -4px rgba(0, 0, 0, 0.3)",
       },
     },
     fontFamily: {

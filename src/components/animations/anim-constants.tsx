@@ -224,6 +224,24 @@ const content: Variants = {
   },
 };
 
+const sideButton: Variants = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      delay: 0.2,
+      duration: 0.2,
+      ease: "easeIn",
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.01,
+    },
+  },
+};
+
 const mobile = (placement: SidebarPlacementType) => {
   return {
     initial: { x: placement === "right" ? "15rem" : "-14rem" },
@@ -248,6 +266,7 @@ const mobile = (placement: SidebarPlacementType) => {
 const sidebar = {
   content,
   mobile,
+  sideButton,
 };
 
 export const animations = {

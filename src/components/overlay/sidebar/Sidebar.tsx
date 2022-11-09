@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, ReactNode } from "react";
+import { HiChevronDoubleRight } from "react-icons/hi";
 
 import { animations, AnimationWrapper } from "components";
 import { useSidebar } from "context";
@@ -16,7 +17,7 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
 
   const { sidebarState, placement } = useSidebar();
   const { isMobile } = useIsMobile();
-  const { modifyBasedOnDevice } = useModifySidebarBasedOnDevice();
+  const { modifyBasedOnDevice, modifyOnClick } = useModifySidebarBasedOnDevice();
 
   useEffect(() => {
     modifyBasedOnDevice();
@@ -42,41 +43,63 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
       )}
 
       {(sidebarState === "expanded" || sidebarState === "small") && (
-        <AnimationWrapper
-          id="sidebar"
-          key="app-sidebar-expanded-small-wrapper"
-          className={clsx(
-            "top-8 flex h-[94vh] rounded-xl bg-white shadow-lg flex-col ml-2 z-[1200] fixed"
-          )}
-          animate={{
-            transition: {
-              duration: 0.4,
-              ease: "easeInOut",
-              // delay: 0.7,
-            },
-            width: sidebarState === "expanded" ? "18rem" : "6rem",
-          }}
-        >
+        <>
           <AnimatePresence mode="wait" initial={false}>
-            {sidebarState === "expanded" ? (
+            {sidebarState === "small" && (
               <AnimationWrapper
-                className="flex h-full flex-col justify-between py-6 px-3"
-                key="extended-app-sidebar-content"
-                variants={animations.sidebar.content}
+                key="small-sidebar-chevron-icon-wrapper"
+                className={clsx(
+                  "shadow-notLeft rounded-r-xl p-2 z-[1201] cursor-pointer bg-white hover:bg-slate-100 fixed top-[4rem] left-[6.5rem]"
+                )}
+                onClick={modifyOnClick}
+                variants={animations.sidebar.sideButton}
               >
-                {ExpandedSidebarContent}
-              </AnimationWrapper>
-            ) : (
-              <AnimationWrapper
-                key="small-app-sidebar-content"
-                className="flex h-full flex-col justify-between items-start pr-3 py-6 pl-5"
-                variants={animations.sidebar.content}
-              >
-                {SmallSidebarContent}
+                <AnimationWrapper
+                  child
+                  key="small-sidebar-chevron-icon"
+                  variants={animations.smallScale}
+                >
+                  <HiChevronDoubleRight className="h-7 w-7 fill-slate-700 hover:fill-slate-800" />
+                </AnimationWrapper>
               </AnimationWrapper>
             )}
           </AnimatePresence>
-        </AnimationWrapper>
+          <AnimationWrapper
+            id="sidebar"
+            key="app-sidebar-expanded-small-wrapper"
+            className={clsx(
+              "top-8 flex h-[94vh] before:rounded-xl bg-white rounded-xl shadow-lg flex-col ml-2 z-[1200] fixed"
+            )}
+            animate={{
+              transition: {
+                duration: 0.4,
+                ease: "easeInOut",
+                // delay: 0.7,
+              },
+              width: sidebarState === "expanded" ? "18rem" : "6rem",
+            }}
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              {sidebarState === "expanded" ? (
+                <AnimationWrapper
+                  className="flex h-full flex-col justify-between py-6 px-3"
+                  key="extended-app-sidebar-content"
+                  variants={animations.sidebar.content}
+                >
+                  {ExpandedSidebarContent}
+                </AnimationWrapper>
+              ) : (
+                <AnimationWrapper
+                  key="small-app-sidebar-content"
+                  className="flex h-full flex-col justify-between items-start pr-3 py-6 pl-5"
+                  variants={animations.sidebar.content}
+                >
+                  {SmallSidebarContent}
+                </AnimationWrapper>
+              )}
+            </AnimatePresence>
+          </AnimationWrapper>
+        </>
       )}
     </AnimatePresence>
   );
