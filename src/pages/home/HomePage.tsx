@@ -1,10 +1,6 @@
-import { useState } from "react";
-
 import { DefaultPageWrapper, Popover, RealButton } from "components";
 
 export const HomePage = () => {
-  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-
   return (
     <DefaultPageWrapper
       RightSide={
@@ -17,21 +13,16 @@ export const HomePage = () => {
         <p className="mb-[5rem]">First things first</p>
 
         <p className="mb-[5rem]">Lorem ipsum 123456789 tere mis component siin on</p>
-        <p className="mb-[5rem]">Lorem ipsum 123456789 tere mis component siin on</p>
-        <p className="mb-[5rem]">Lorem ipsum 123456789 tere mis component siin on</p>
-        <p className="mb-[5rem]">Lorem ipsum 123456789 tere mis component siin on</p>
         <div className="mb-[5rem]">
-          <RealButton id="popoverCreator" onClick={() => setIsPopoverOpen(value => !value)}>
-            hmm
-          </RealButton>
-          <Popover
-            isPopoverOpen={isPopoverOpen}
-            setIsPopoverOpen={setIsPopoverOpen}
-            animKey="popover1"
-          >
-            popover here
+          <Popover animKey="hello1" action={<RealButton>hello</RealButton>}>
+            something
+          </Popover>
+          <p>tere</p>
+          <Popover animKey="hello3" action={<RealButton>hellod</RealButton>}>
+            something2
           </Popover>
         </div>
+        <p className="mb-[30rem]">Lorem ipsum 123456789 tere mis component siin on</p>
         <p className="">hello here is the end of the page</p>
       </div>
     </DefaultPageWrapper>

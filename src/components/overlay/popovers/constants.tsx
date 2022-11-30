@@ -4,12 +4,8 @@ export const popoverSizes = {
   lg: "w-64",
 };
 
-export type PopoverProps = React.HTMLAttributes<HTMLDivElement> & {
+export interface PopoverProps extends React.HTMLAttributes<HTMLDivElement> {
   children: string | React.ReactNode;
-  animKey: string;
-  size?: keyof typeof popoverSizes;
-  className?: string;
-  isPopoverOpen: boolean;
-  setIsPopoverOpen: (isPopoverOpen: boolean) => void;
-  closeOnInnerClick?: boolean;
-};
+  animKey?: string;
+  action: React.ReactNode;
+}

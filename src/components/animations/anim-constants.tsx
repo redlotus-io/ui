@@ -123,23 +123,20 @@ const modalEffect: Variants = {
 };
 
 const popoverEffect: Variants = {
-  initial: { opacity: 0, scale: 0.2, y: 0, x: -30 },
+  initial: { opacity: 0.6, y: 14 },
   animate: {
-    scale: 1,
     opacity: 1,
-    translateY: 20,
-    translateX: "0%",
+    y: 7,
     transition: {
-      duration: 0.15,
+      duration: 0.2,
       ease: "easeIn",
     },
   },
   exit: {
     opacity: 0,
-    scale: 0.2,
-    translateY: 1,
+    y: 14,
     transition: {
-      duration: 0.1,
+      duration: 0.2,
       ease: "easeIn",
     },
   },
