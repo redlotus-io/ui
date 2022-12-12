@@ -54,7 +54,7 @@
     "react-router-dom": "^6.4.3",
     "tailwindcss": "^3.2.1",
     "tailwindcss-border-gradient-radius": "^3.0.1",
-    "vite-plugin-pwa": "^0.13.2",
+    "vite-plugin-pwa": "^0.14.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
