@@ -30,6 +30,8 @@ import "@redlotus/ui/dist/style.css";
 - Clone repository
 - Ensure you have the latest LTS version of Node.js installed
 - Install dependencies with `yarn`
+- Install `npm install -g npm-install-peers`
+- run `npm-install-peers` to install peer dependencies
 - Run `yarn start` or `yarn dev` to enter dev mode watch
 
 ## License
