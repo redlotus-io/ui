@@ -1,4 +1,4 @@
-import { HiX } from "react-icons/all";
+import { HiX } from "react-icons/hi";
 
 import { AnimationWrapper, SidebarLink, animations } from "components";
 import { useIsMobile, useModifySidebarBasedOnDevice } from "hooks";

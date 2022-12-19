@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { HiAnnotation, HiArchive, HiHome } from "react-icons/all";
+import { HiAnnotation, HiArchive, HiHome } from "react-icons/hi";
 
 import { HomePage, AboutPage, SettingsPage } from "pages";
 import { Router } from "types";
