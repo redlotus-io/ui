@@ -48,7 +48,6 @@ export const PartialPageWrapper = ({
           <div className="flex justify-start">{Sidebar}</div>
           <div
             className={clsx(
-              "w-full py-8 px-6",
               classNameContent,
               (sidebarState === "expanded" || sidebarState === "small") && "ml-[6.5rem]"
             )}
