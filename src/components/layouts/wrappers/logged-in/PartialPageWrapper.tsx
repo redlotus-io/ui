@@ -8,15 +8,22 @@ interface Props {
    * Main content
    */
   children: React.ReactNode;
-  Sidebar: React.ReactNode;
+  Sidebar?: React.ReactNode;
   MobileContent: React.ReactNode;
   /**
    * Column on the right side of the screen
    */
   RightSide?: React.ReactNode;
+  classNameContent?: string;
 }
 
-export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent }: Props) => {
+export const PartialPageWrapper = ({
+  children,
+  RightSide,
+  Sidebar,
+  MobileContent,
+  classNameContent,
+}: Props) => {
   const { isMobile } = useIsMobile();
   const { sidebarState } = useSidebar();
 
@@ -42,6 +49,7 @@ export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent
           <div
             className={clsx(
               "w-full py-8 px-6",
+              classNameContent,
               (sidebarState === "expanded" || sidebarState === "small") && "ml-[6.5rem]"
             )}
           >
