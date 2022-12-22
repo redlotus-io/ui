@@ -14,16 +14,9 @@ interface Props {
    * Column on the right side of the screen
    */
   RightSide?: React.ReactNode;
-  classNameContent?: string;
 }
 
-export const PartialPageWrapper = ({
-  children,
-  RightSide,
-  Sidebar,
-  MobileContent,
-  classNameContent,
-}: Props) => {
+export const PartialPageWrapper = ({ children, RightSide, Sidebar, MobileContent }: Props) => {
   const { isMobile } = useIsMobile();
   const { sidebarState } = useSidebar();
 
@@ -48,7 +41,7 @@ export const PartialPageWrapper = ({
           <div className="flex justify-start">{Sidebar}</div>
           <div
             className={clsx(
-              classNameContent,
+              "w-full py-8 px-6",
               (sidebarState === "expanded" || sidebarState === "small") && "ml-[6.5rem]"
             )}
           >

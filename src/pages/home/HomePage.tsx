@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-import { Accordion, DefaultPageWrapper, Modal, Popover, RealButton } from "components";
+import {
+  Accordion,
+  DefaultPageWrapper,
+  Modal,
+  Popover,
+  RealButton,
+  realButtonVariants,
+} from "components";
 
 const loremIpsumParagraph = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Pellentesque euismod, nisl eget aliquam tincidunt, nunc eros aliquam massa, nec
@@ -24,7 +31,16 @@ export const HomePage = () => {
     >
       <div className="space-y-6">
         <p className="mb-[5rem]">First things first</p>
-
+        <div className="flex flex-col space-y-2">
+          {Object.keys(realButtonVariants).map(variant => (
+            <RealButton variant={variant as keyof typeof realButtonVariants} size="oneLetter">
+              A
+            </RealButton>
+          ))}
+        </div>
+        <RealButton variant={"green"} size="oneLetter">
+          a
+        </RealButton>
         <Accordion
           key={"dasdasd"}
           title={"dasdasd"}

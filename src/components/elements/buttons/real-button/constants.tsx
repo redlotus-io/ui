@@ -15,12 +15,37 @@ export const realButtonVariants = {
     hover:text-white
     active:border-blue-700
     dark:bg-blue-700 dark:border-blue-900 dark:active:border-blue-700`,
+  casualRed: `text-textGray bg-[#FF6961] border-[#B82E26]
+    hover:text-textGray
+    active:border-[#FF6961]`,
+  casualOrange: `text-textGray bg-[#FFB480] border-[#C66929]
+    hover:text-textGray
+    active:border-[#FFB480]`,
+  casualYellow: `text-textGray bg-[#F8F38D] border-[#CCC421]
+    hover:text-textGray
+    active:border-[#F8F38D]`,
+  casualGreen: `text-textGray bg-[#42D6A4] border-[#20AB7C]
+    hover:text-textGray
+    active:border-[#42D6A4]`,
+  casualAqua: `text-textGray bg-[#08CAD1] border-[#0F8C90]
+    hover:text-textGray
+    active:border-[#08CAD1]`,
+  casualBlue: `text-textGray bg-[#59ADF6] border-[#2984D3]
+    hover:text-textGray
+    active:border-[#59ADF6]`,
+  casualViolet: `text-textGray bg-[#9D94FF] border-[#6156E1]
+    hover:text-textGray
+    active:border-[#9D94FF]`,
+  casualPurple: `text-textGray bg-[#C780E8] border-[#B15BD9]
+    hover:text-textGray
+    active:border-[#C780E8]`,
 };
 
 export const realButtonSizes = {
-  sm: "py-2 px-10 text-sm",
-  md: "py-2 px-14 text-md",
-  lg: "py-3 px-18 text-lg",
+  sm: "py-2 px-10 text-sm rounded-2xl",
+  md: "py-2 px-14 text-md rounded-2xl",
+  lg: "py-3 px-18 text-lg rounded-2xl",
+  oneLetter: "py-3 px-5 text-md rounded-lg uppercase",
 };
 
 export type RealButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
