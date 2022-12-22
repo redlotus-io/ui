@@ -10,7 +10,7 @@ interface Props {
 export const NavbarTop = ({ user, title }: Props) => {
   const { setSidebarState, setPrevSidebarState } = useSidebar();
   return (
-    <div className="mx-auto inset-x-0 my-2 fixed top-0 z-[1020] flex h-16 rounded-md drop-shadow-lg shadow-inner items-center w-[95%] bg-slate-50 py-12">
+    <div className="mx-auto inset-x-0 my-2 fixed top-0 z-[1200] flex h-16 rounded-md drop-shadow-lg shadow-inner items-center w-[95%] bg-slate-50 py-12">
       <div className="flex flex-1 items-center justify-between px-4">
         <p className="text-2xl font-semibold text-gray-800">{title}</p>
         <AnimationWrapper variants={animations.smallScale} key="nt-user-icon">

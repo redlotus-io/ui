@@ -7,7 +7,7 @@ import { PopoverButton, PopoverProps } from ".";
 
 export const Popover = ({ children, action, animKey }: PopoverProps) => {
   return (
-    <HeadlessPopover className="z-[1030]">
+    <HeadlessPopover className="z-[1301]">
       {({ open }) => (
         <>
           <PopoverButton>{action}</PopoverButton>

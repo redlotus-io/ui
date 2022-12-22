@@ -221,6 +221,21 @@ const content: Variants = {
   },
 };
 
+const accordionHeader = (open: boolean) => {
+  if (open) {
+    return {
+      animate: {
+        backgroundColor: "red",
+      },
+    } as Variants;
+  }
+  return {
+    animate: {
+      backgroundColor: "hotpink",
+    },
+  } as Variants;
+};
+
 const sideButton: Variants = {
   initial: { opacity: 0 },
   animate: {
@@ -281,4 +296,5 @@ export const animations = {
   smallScaleXs,
   button,
   sidebar,
+  accordionHeader,
 };

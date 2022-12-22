@@ -6,11 +6,11 @@ import { ReactNode, useRef } from "react";
 import { animations, AnimationWrapper } from "components";
 
 const modalMaxWidth = {
-  xs: "sm:max-w-xs",
-  sm: "sm:max-w-sm",
-  md: "sm:max-w-md",
-  lg: "sm:max-w-lg",
-  xl: "sm:max-w-xl",
+  xs: "sm:w-[20rem]",
+  sm: "sm:w-[24rem]",
+  md: "sm:w-[28rem]",
+  lg: "sm:w-[32rem]",
+  xl: "sm:w-[36rem]",
 };
 
 interface Props {
@@ -33,7 +33,7 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
             as={motion.div}
             key="modal-dialog"
             initialFocus={initialFocusRef}
-            className="fixed inset-0 z-[1000] flex select-none items-center justify-center"
+            className="fixed inset-0 z-[1300] flex select-none items-center justify-center"
             open={open}
             onClose={setOpen}
           >
@@ -54,8 +54,8 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
               id="modal-children"
               variants={animations.modalEffect}
               className={clsx(
-                modalMaxWidth[maxWidth],
-                "min:min-w-[20rem] z-[1020] min-w-[95%] max-w-[94%] rounded-xl bg-white"
+                "minscreen:min-w-[20rem] rounded-xl bg-white",
+                modalMaxWidth[maxWidth]
               )}
             >
               {children}
