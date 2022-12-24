@@ -31,16 +31,13 @@ export const HomePage = () => {
     >
       <div className="space-y-6">
         <p className="mb-[5rem]">First things first</p>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-row space-x-2 max-w-xs">
           {Object.keys(realButtonVariants).map(variant => (
             <RealButton variant={variant as keyof typeof realButtonVariants} size="oneLetter">
               A
             </RealButton>
           ))}
         </div>
-        <RealButton variant={"green"} size="oneLetter">
-          a
-        </RealButton>
         <Accordion
           key={"dasdasd"}
           title={"dasdasd"}
