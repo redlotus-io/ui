@@ -83,7 +83,7 @@ export const HomePage = () => {
           iconClassName="h-8 w-8 text-[#E50815] "
         />
 
-        <div className="mb-[20rem]"></div>
+        <div className="text-casualGreen mb-[20rem]">random text</div>
         <div className="mb-[5rem]">
           <Popover animKey="hello1" action={<RealButton>hello</RealButton>}>
             something

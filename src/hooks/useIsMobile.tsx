@@ -1,10 +1,21 @@
 import { useWindowWidth } from "@react-hook/window-size";
 import { useEffect, useState } from "react";
 
-export const useIsMobile = () => {
+const sizes = {
+  minscreen: 340,
+  xs: 460,
+  xs2: 500,
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  "2xl": 1536,
+};
+
+export const useIsMobile = (size: keyof typeof sizes = "md") => {
   const width = useWindowWidth();
 
-  const [isMobile, setIsMobile] = useState<boolean>(width >= 768 ? false : true);
+  const [isMobile, setIsMobile] = useState<boolean>(width >= sizes[size] ? false : true);
 
   useEffect(() => {
     const checkIfUserIsOnMobile = () => {
@@ -20,5 +31,5 @@ export const useIsMobile = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [width]);
 
-  return { isMobile };
+  return { isMobile, size };
 };
