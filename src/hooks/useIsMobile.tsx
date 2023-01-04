@@ -17,6 +17,34 @@ export const useIsMobile = (size: keyof typeof sizes = "md") => {
 
   const [isMobile, setIsMobile] = useState<boolean>(width >= sizes[size] ? false : true);
 
+  const getCurrentSize = () => {
+    if (width >= sizes["2xl"]) {
+      return "2xl";
+    }
+    if (width >= sizes.xl) {
+      return "xl";
+    }
+    if (width >= sizes.lg) {
+      return "lg";
+    }
+    if (width >= sizes.md) {
+      return "md";
+    }
+    if (width >= sizes.sm) {
+      return "sm";
+    }
+    if (width >= sizes.xs2) {
+      return "xs2";
+    }
+    if (width >= sizes.xs) {
+      return "xs";
+    }
+    if (width >= sizes.minscreen) {
+      return "minscreen";
+    }
+    return "xs";
+  };
+
   useEffect(() => {
     const checkIfUserIsOnMobile = () => {
       if (width >= 768) {
@@ -31,5 +59,5 @@ export const useIsMobile = (size: keyof typeof sizes = "md") => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [width]);
 
-  return { isMobile, size };
+  return { isMobile, size: getCurrentSize() };
 };
