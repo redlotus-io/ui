@@ -1,6 +1,19 @@
 /* eslint-disable global-require */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const colors = require("tailwindcss/colors");
+const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette").default;
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+const addVariablesForColors = ({ addBase, theme }) => {
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+};
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
@@ -77,5 +90,6 @@ module.exports = {
     require("tailwind-scrollbar")({ nocompatible: true }),
     require("tailwind-scrollbar-hide"),
     require("tailwindcss-border-gradient-radius"),
+    addVariablesForColors,
   ],
 };
