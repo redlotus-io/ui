@@ -29,6 +29,7 @@ export const Accordion = ({
   titleClassname,
 }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const rotateAmount = 480;
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
@@ -44,7 +45,7 @@ export const Accordion = ({
         aria-expanded={isOpen}
         className={clsx("flex justify-between items-center w-full space-x-4 px-4")}
       >
-        <p className={clsx("text-xl font-medium", titleClassname)}>{title}</p>
+        <p className={clsx("text-lg sm:text-xl font-medium text-start", titleClassname)}>{title}</p>
         <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={isOpen ? "minus" : "plus"}
