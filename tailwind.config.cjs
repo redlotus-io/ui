@@ -69,6 +69,9 @@ module.exports = {
     fontFamily: {
       varela: ["Varela Round", "sans-serif"],
       sans: ["Rubik", "sans-serif"],
+      baloo: ["baloo-2", "cursive"],
+      quicksand: ["Quicksand", "sans-serif"],
+      catamaran: ["Catamaran", "sans-serif"],
     },
     linearBorderGradients: () => ({
       colors: {
