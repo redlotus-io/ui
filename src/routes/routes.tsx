@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import { HiAnnotation, HiArchive, HiHome } from "react-icons/hi";
+import { HiAnnotation, HiArchive, HiFilm, HiHome } from "react-icons/hi";
 
-import { HomePage, AboutPage, SettingsPage } from "pages";
+import { HomePage, AboutPage, SettingsPage, FramerPage } from "pages";
 import { Router } from "types";
 
 const smallIconCss = "h-8 w-8 fill-inherit";
@@ -29,5 +29,13 @@ export const routes: Router[] = [
     smallIcon: <HiAnnotation className={clsx(smallIconCss)} />,
     bigIcon: <HiAnnotation className={clsx(bigIconCss)} />,
     tooltip: "settings",
+  },
+  {
+    to: "/framer",
+    routeName: "Framer",
+    element: <FramerPage />,
+    smallIcon: <HiFilm className={clsx(smallIconCss)} />,
+    bigIcon: <HiFilm className={clsx(bigIconCss)} />,
+    tooltip: "framer",
   },
 ];

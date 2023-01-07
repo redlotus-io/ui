@@ -50,8 +50,10 @@
     "framer-motion": "^7.10.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hotkeys-hook": "^4.3.2",
     "react-icons": "4.7.1",
     "react-router-dom": "^6.5.0",
+    "react-use-measure": "^2.1.1",
     "tailwindcss": "^3.2.4",
     "tailwindcss-border-gradient-radius": "^3.0.1",
     "vite-plugin-pwa": "^0.13.2",
@@ -91,19 +93,19 @@
     "vitest": "^0.24.5"
   },
   "peerDependencies": {
+    "@emotion/react": ">=11.10.5",
+    "@emotion/styled": ">=11.10.5",
+    "@headlessui/react": ">=1.7.3",
+    "@react-hook/window-size": ">=3.1.1",
+    "clsx": ">=1.2.1",
+    "date-fns": ">=2.29.3",
+    "formik": ">=2.2.9",
+    "framer-motion": ">=7.6.4",
     "react": "^17 || ^18",
     "react-dom": "^17 || ^18",
+    "react-icons": ">=4.3.1",
     "react-router-dom": ">=6.3.0",
-    "tailwindcss-border-gradient-radius": ">=3.0.1",
-    "framer-motion": ">=7.6.4",
-    "@headlessui/react": ">=1.7.3",
-    "@emotion/react":">=11.10.5",
-    "@emotion/styled":">=11.10.5",
-    "@react-hook/window-size":">=3.1.1",
-    "clsx":">=1.2.1",
-    "date-fns":">=2.29.3",
-    "formik":">=2.2.9",
-    "react-icons":">=4.3.1"
+    "tailwindcss-border-gradient-radius": ">=3.0.1"
   },
   "publishConfig": {
     "access": "public"

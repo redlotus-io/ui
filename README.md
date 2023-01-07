@@ -30,7 +30,7 @@ import "@redlotus/ui/dist/style.css";
 - Clone repository
 - Ensure you have the latest LTS version of Node.js installed
 - Install dependencies with `yarn`
-- Run `yarn add react react-dom react-router-dom tailwindcss-border-gradient-radius framer-motion @headlessui/react @emotion/react @emotion/styled @react-hook/window-size clsx date-fns formik react-icons` to install peer dependencies
+- Run `yarn add react react-dom react-router-dom tailwindcss-border-gradient-radius framer-motion @headlessui/react @emotion/react @emotion/styled @react-hook/window-size clsx date-fns formik react-icons react-use-measure react-hotkeys-hook` to install peer dependencies
 - Run `yarn start` or `yarn dev` to enter dev mode watch
 
 ## License
