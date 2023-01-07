@@ -17,10 +17,6 @@ html, body {
   user-select: none;
 }
 
-:focus {
-  outline: none !important;
-}
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -59,7 +55,7 @@ input[type="number"] {
   }
 
   .input-error {
-    @apply border-2 border-red-300 caret-red-400 focus: outline-none focus:border-red-500;
+    @apply border-2 border-red-300 caret-red-400 outline-none focus:border-red-500;
   }
 
   .scrollbar-overflow {
