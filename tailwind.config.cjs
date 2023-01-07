@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 /* eslint-disable @typescript-eslint/no-var-requires */
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 const flattenColorPalette = require("tailwindcss/lib/util/flattenColorPalette").default;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
@@ -19,17 +20,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   // darkMode: "class",
   theme: {
+    screens: {
+      minscreen: "340px",
+      xs: "460px",
+      xs2: "500px",
+      ...defaultTheme.screens,
+    },
     extend: {
-      screens: {
-        minscreen: "340px",
-        xs: "460px",
-        xs2: "500px",
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1536px",
-      },
       colors: {
         textGray: "#292929",
         textWhite: "#f3f2f0",
