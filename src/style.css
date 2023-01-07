@@ -35,11 +35,11 @@ input[type="number"] {
   }
   
   p {
-    @apply text-[#393939] font-catamaran;
+    @apply text-[#393939];
   }
 
   h1 {
-    @apply text-[#393939] font-catamaran;
+    @apply text-[#393939];
   }
 
   span {
