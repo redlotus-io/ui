@@ -52,7 +52,7 @@ export const FormikInput = ({
         </div>
       )}
 
-      <div className="relative max-w-fit">
+      <div className="relative">
         {/* <div className="absolute inset-0 rounded-lg scale-105 bg-blue-200" /> */}
         {inputPrefix && (
           <div className="absolute z-[1] inset-y-0 left-0 flex items-center pl-3">
