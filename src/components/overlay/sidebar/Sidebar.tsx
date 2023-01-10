@@ -27,19 +27,33 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
   return (
     <AnimatePresence initial={false}>
       {sidebarState === "mobile" && (
-        <AnimationWrapper
-          id="sidebar"
-          key="mobile-app-sidebar-wrapper"
-          variants={animations.sidebar.mobile(placement)}
-          className={clsx(
-            "fixed top-0 z-[1200] flex h-full w-64 flex-col bg-white",
-            placement === "right" ? "right-0" : "left-0"
-          )}
-        >
-          <div className="flex h-full flex-col justify-between py-6 px-3">
-            {ExpandedSidebarContent}
-          </div>
-        </AnimationWrapper>
+        <>
+          <AnimationWrapper
+            id="sidebar"
+            key="mobile-app-sidebar-wrapper"
+            variants={animations.sidebar.mobile(placement)}
+            className={clsx(
+              "fixed top-0 z-[1200] flex h-full w-64 flex-col bg-white",
+              placement === "right" ? "right-0" : "left-0"
+            )}
+          >
+            <div className="flex h-full flex-col justify-between py-6 px-3">
+              {ExpandedSidebarContent}
+            </div>
+          </AnimationWrapper>
+          {/* <AnimationWrapper
+            key="mobile-app-sidebar-overlay"
+            id="overlay"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 0.5,
+            }}
+            transition={{ duration: 0.4, ease: "linear" }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSidebarState(isMobile ? "closed" : "small")}
+            className="absolute inset-0 z-[5000] h-auto w-full bg-gray-500"
+          /> */}
+        </>
       )}
 
       {(sidebarState === "expanded" || sidebarState === "small") && (

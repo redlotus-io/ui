@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import { HiAnnotation, HiArchive, HiFilm, HiHome } from "react-icons/hi";
+import { HiAnnotation, HiArchive, HiCollection, HiFilm, HiHome } from "react-icons/hi";
 
-import { HomePage, AboutPage, SettingsPage, FramerPage } from "pages";
+import { HomePage, AboutPage, SettingsPage, FramerPage, PopupPage } from "pages";
 import { Router } from "types";
 
 const smallIconCss = "h-8 w-8 fill-inherit";
@@ -37,5 +37,13 @@ export const routes: Router[] = [
     smallIcon: <HiFilm className={clsx(smallIconCss)} />,
     bigIcon: <HiFilm className={clsx(bigIconCss)} />,
     tooltip: "framer",
+  },
+  {
+    to: "/popups",
+    routeName: "PopUps",
+    element: <PopupPage />,
+    smallIcon: <HiCollection className={clsx(smallIconCss)} />,
+    bigIcon: <HiCollection className={clsx(bigIconCss)} />,
+    tooltip: "modals",
   },
 ];
