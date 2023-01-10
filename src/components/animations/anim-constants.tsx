@@ -195,10 +195,18 @@ const smallScaleXs: Variants = {
 
 const button: Variants = {
   whileHover: {
-    scale: [1, 1.1],
-    translateY: -6,
+    scale: [1, 1.05],
+    translateY: -2,
     transition: {
       duration: 0.2,
+      ease: "easeIn",
+    },
+  },
+  whileTap: {
+    translateY: 1,
+    scale: 1,
+    transition: {
+      duration: 0.1,
       ease: "easeIn",
     },
   },

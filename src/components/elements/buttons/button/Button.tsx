@@ -16,6 +16,8 @@ const variants = {
     hover:text-white
     active:border-lime-500
     dark:bg-lime-700 dark:border-lime-800 dark:active:border-lime-700`,
+  red: `bg-[#E50815] text-[#f3f2f0]
+    hover:text-white`,
   dark: `bg-gray-700 text-[#f3f2f0] border-gray-900
     hover:text-white
     active:border-gray-700
@@ -49,11 +51,11 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <AnimationWrapper key="regular-button" variants={animations.button}>
+    <AnimationWrapper key="regular-button" className="max-w-fit" variants={animations.button}>
       <button
         type={type}
         className={clsx(
-          `m-0 select-none rounded-2xl text-center font-medium uppercase tracking-wider`,
+          `m-0 select-none rounded-2xl text-center font-medium tracking-wider`,
           variants[variant],
           sizes[size],
           !isValid && "cursor-not-allowed opacity-50",

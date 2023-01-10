@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import { HiAnnotation, HiEye } from "react-icons/hi";
 
-import { DefaultPageWrapper, FormikInput, RealButton } from "components";
+import { Button, DefaultPageWrapper, FormikInput, RealButton } from "components";
 
 export const HomePage = () => {
   return (
@@ -35,6 +35,11 @@ export const HomePage = () => {
             />
           </>
         </Formik>
+        <div className="max-w-fit"></div>
+        <Button>registreeri</Button>
+        <Button variant="red" className="w-[20rem]">
+          registreeri
+        </Button>
       </div>
     </DefaultPageWrapper>
   );
