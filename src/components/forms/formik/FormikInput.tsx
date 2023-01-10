@@ -14,7 +14,7 @@ const sizes = {
 const variants = {
   // regular --> hover --> active --> dark
   unstyled: "",
-  default: `bg-white text-text-primary border-2 border-transparent focus:outline-none focus:border-blue-500`,
+  default: `bg-white text-text-primary border-[2px] border-stone-100 focus:outline-none focus:border-blue-500`,
   green: `bg-lime-500 text-[#f3f2f0] border-lime-600
   hover:text-white`,
   dark: `bg-gray-700 text-[#f3f2f0] border-gray-900

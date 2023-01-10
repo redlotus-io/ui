@@ -12,7 +12,7 @@ export const HomePage = () => {
         </div>
       }
     >
-      <div className="space-y-6 ml-20">
+      <div className="space-y-6 ml-20 bg-white p-20">
         <Formik initialValues={{}} onSubmit={() => {}}>
           <>
             <FormikInput
@@ -37,7 +37,7 @@ export const HomePage = () => {
         </Formik>
         <div className="max-w-fit"></div>
         <Button>registreeri</Button>
-        <Button variant="red" className="w-[20rem]">
+        <Button variant="red" className="w-[20rem] !py-4">
           registreeri
         </Button>
       </div>
