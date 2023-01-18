@@ -11,12 +11,21 @@ export const realButtonVariants = {
     hover:text-gray-800
     active:border-slate-50
     outline-lightOutline`,
+  green: `bg-lime-500 text-[#f3f2f0] border-lime-600
+    hover:text-white
+    active:border-lime-500`,
   blue: `bg-blue-700 text-textWhite border-blue-900
     hover:text-white
     active:border-blue-700
     dark:bg-blue-700 dark:border-blue-900 dark:active:border-blue-700
     focus:ring-blue-500
     outline-blueOutline`,
+  blue1: `bg-blue-400 text-[#f3f2f0] border-blue-500
+    hover:text-white
+    active:border-blue-400`,
+  blue2: `bg-blue-500 text-[#f3f2f0] border-blue-600
+    hover:text-white
+    active:border-blue-500`,
   casualRed: `text-textGray bg-casualRed border-casualRedDarker
     hover:text-textGray
     active:border-casualRed
