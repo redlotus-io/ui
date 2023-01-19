@@ -61,6 +61,7 @@ export const realButtonVariants = {
 };
 
 export const realButtonSizes = {
+  icon: "p-2 rounded-lg",
   sm: "py-2 px-10 text-sm rounded-2xl max-h-[4rem]",
   md: "py-2 px-14 text-md rounded-2xl max-h-[4rem]",
   lg: "py-3 px-18 text-lg rounded-2xl max-h-[4rem]",
@@ -68,9 +69,10 @@ export const realButtonSizes = {
 };
 
 export type RealButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  children: string | React.ReactNode;
   variant?: keyof typeof realButtonVariants;
   size?: keyof typeof realButtonSizes;
-  children: string | React.ReactNode;
+  focus?: boolean;
 };
 
 export const RealButton = ({
@@ -79,6 +81,7 @@ export const RealButton = ({
   variant = "dark",
   size = "md",
   children,
+  focus = false,
   ...props
 }: RealButtonProps) => {
   return (
@@ -88,7 +91,7 @@ export const RealButton = ({
         "m-0 border-b-[6px] text-center font-medium tracking-wider",
         "transition-all duration-300 hover:-translate-y-[0.15rem]",
         "active:translate-y-[0.2rem] active:duration-75",
-        "focus:outline-[3.5px] focus:outline focus:-translate-y-[0.2rem]",
+        focus ? "focus:outline-[3.5px] focus:outline focus:-translate-y-[0.2rem]" : "",
         realButtonVariants[variant],
         realButtonSizes[size],
         className

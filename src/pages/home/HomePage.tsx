@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { HiAnnotation, HiEye } from "react-icons/hi";
+import { HiAnnotation, HiCamera, HiEye } from "react-icons/hi";
 
 import { Button, DefaultPageWrapper, FormikInput, RealButton } from "components";
 
@@ -41,6 +41,9 @@ export const HomePage = () => {
           registreeri
         </Button>
       </div>
+      <RealButton size="icon" className="">
+        <HiCamera className="w-12 h-12" />
+      </RealButton>
     </DefaultPageWrapper>
   );
 };
