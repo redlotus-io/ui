@@ -41,7 +41,7 @@ export const HomePage = () => {
           registreeri
         </Button>
       </div>
-      <RealButton size="icon" className="">
+      <RealButton size="icon" className="mb-[40rem]">
         <HiCamera className="w-12 h-12" />
       </RealButton>
     </DefaultPageWrapper>

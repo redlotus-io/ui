@@ -7,8 +7,9 @@ z-[1301] Popover
 (removed for now) Modal Children
 z-[1300] Modal Outer
 z-[1201] Sidebar expand button
-z-[1200] Sidebar expandable
-z-[1200] Sidebar small/extended
+z-[1205] Sidebar expandable
+z-[1205] Sidebar small/extended
+z-[1201] Sidebar background opacity
 z-[1200] NavbarTop
 z-[1200] Sidebar Icon
 z-[998] Small sidebar content

@@ -9,25 +9,14 @@ export const useSidebarUtils = () => {
   const { isMobile } = useIsMobile();
   // when sidebar is expanded and click is not on sidebar, close the sidebar
   const sidebar = document.getElementById("sidebar");
-  const sidebarButton = document.getElementById("sidebar-button");
   useEffect(() => {
     const closeSidebar = (e: MouseEvent) => {
       e.preventDefault();
 
       const target = e.target as HTMLElement;
 
-      if (
-        (sidebarState === "expanded" && target !== sidebar && !sidebar?.contains(target)) ||
-        (sidebarState === "mobile" &&
-          target !== sidebar &&
-          !sidebar?.contains(target) &&
-          target !== sidebarButton &&
-          !sidebarButton?.contains(target))
-      ) {
-        if (isMobile) {
-          setPrevSidebarState("mobile");
-          setSidebarState("closed");
-        } else {
+      if (sidebarState === "expanded" && target !== sidebar && !sidebar?.contains(target)) {
+        if (!isMobile) {
           // when sidebar is expanded and click is not on sidebar, close the sidebar to small
           setPrevSidebarState("expanded");
           setSidebarState("small");

@@ -1,6 +1,7 @@
+import { Dialog, Transition } from "@headlessui/react";
 import clsx from "clsx";
 import { AnimatePresence } from "framer-motion";
-import { useEffect, ReactNode } from "react";
+import { useEffect, ReactNode, Fragment, useState } from "react";
 import { HiChevronDoubleRight } from "react-icons/hi";
 
 import { animations, AnimationWrapper } from "components";
@@ -15,7 +16,7 @@ interface Props {
 export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) => {
   useSidebarUtils();
 
-  const { sidebarState, placement } = useSidebar();
+  const { sidebarState, placement, setSidebarState } = useSidebar();
   const { isMobile } = useIsMobile();
   const { modifyBasedOnDevice, modifyOnClick } = useModifySidebarBasedOnDevice();
 
@@ -33,7 +34,7 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
             key="mobile-app-sidebar-wrapper"
             variants={animations.sidebar.mobile(placement)}
             className={clsx(
-              "fixed top-0 z-[1200] flex h-full w-64 flex-col bg-white",
+              "fixed top-0 z-[1205] flex h-full w-64 flex-col bg-white",
               placement === "right" ? "right-0" : "left-0"
             )}
           >
@@ -41,7 +42,8 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
               {ExpandedSidebarContent}
             </div>
           </AnimationWrapper>
-          {/* <AnimationWrapper
+
+          <AnimationWrapper
             key="mobile-app-sidebar-overlay"
             id="overlay"
             initial={{ opacity: 0 }}
@@ -51,8 +53,8 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
             transition={{ duration: 0.4, ease: "linear" }}
             exit={{ opacity: 0 }}
             onClick={() => setSidebarState(isMobile ? "closed" : "small")}
-            className="absolute inset-0 z-[5000] h-auto w-full bg-gray-500"
-          /> */}
+            className="fixed inset-0 bg-gray-500 bg-opacity-75 z-[1201] transition-opacity"
+          />
         </>
       )}
 
@@ -116,5 +118,75 @@ export const Sidebar = ({ SmallSidebarContent, ExpandedSidebarContent }: Props) 
         </>
       )}
     </AnimatePresence>
+  );
+};
+
+export const Example = () => {
+  const [open, setOpen] = useState(true);
+
+  return (
+    <Transition.Root show={open} as={Fragment}>
+      <Dialog as="div" className="relative z-10" onClose={setOpen}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-in-out duration-500"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in-out duration-500"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        </Transition.Child>
+
+        <div className="fixed inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+              <Transition.Child
+                as={Fragment}
+                enter="transform transition ease-in-out duration-500 sm:duration-700"
+                enterFrom="translate-x-full"
+                enterTo="translate-x-0"
+                leave="transform transition ease-in-out duration-500 sm:duration-700"
+                leaveFrom="translate-x-0"
+                leaveTo="translate-x-full"
+              >
+                <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+                    <div className="px-4 sm:px-6">
+                      <div className="flex items-start justify-between">
+                        <Dialog.Title className="text-lg font-medium text-gray-900">
+                          Panel title
+                        </Dialog.Title>
+                        <div className="ml-3 flex h-7 items-center">
+                          <button
+                            type="button"
+                            className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                            onClick={() => setOpen(false)}
+                          >
+                            <span className="sr-only">Close panel</span>
+                            <HiChevronDoubleRight className="h-6 w-6" aria-hidden="true" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative mt-6 flex-1 px-4 sm:px-6">
+                      {/* Replace with your content */}
+                      <div className="absolute inset-0 px-4 sm:px-6">
+                        <div
+                          className="h-full border-2 border-dashed border-gray-200"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      {/* /End replace */}
+                    </div>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </div>
+      </Dialog>
+    </Transition.Root>
   );
 };
