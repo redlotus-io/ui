@@ -41,8 +41,22 @@ export const HomePage = () => {
           registreeri
         </Button>
       </div>
-      <RealButton size="icon" className="mb-[40rem]">
-        <HiCamera className="w-12 h-12" />
+
+      <div className="grid grid-cols-4 gap-2 max-w-[340px] m-auto xs2:flex xs2:justify-start xs:max-w-none xs:m-0 xs:ml-4 mb-40">
+        <RealButton size="oneLetter">A</RealButton>
+        <RealButton size="oneLetter">B</RealButton>
+        <RealButton size="oneLetter">C</RealButton>
+        <RealButton size="oneLetter">D</RealButton>
+        <RealButton size="oneLetter">E</RealButton>
+        <RealButton size="oneLetter">F</RealButton>
+        <RealButton size="oneLetter">G</RealButton>
+        <RealButton size="oneLetter">H</RealButton>
+        <RealButton size="icon">
+          <HiCamera className="w-7 h-7" />
+        </RealButton>
+      </div>
+      <RealButton size="md">
+        <HiCamera className="w-7 h-7" />
       </RealButton>
     </DefaultPageWrapper>
   );

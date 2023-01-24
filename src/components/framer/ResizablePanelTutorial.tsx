@@ -162,7 +162,7 @@ const Form = ({ onSubmit, afterSave, children, ...props }: any) => {
   );
 };
 
-export const ResizablePanel = () => {
+export const ResizablePanelTutorial = () => {
   const [status, setStatus] = useState("idle");
   const [ref, bounds] = useMeasure();
 

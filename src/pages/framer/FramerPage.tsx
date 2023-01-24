@@ -1,9 +1,9 @@
-import { ResizablePanel } from "components";
+import { ResizablePanelTutorial } from "components";
 
 export const FramerPage = () => {
   return (
     <>
-      <ResizablePanel />
+      <ResizablePanelTutorial />
       {/* <Calendar /> */}
       {/* <Carousel2 /> */}
     </>
