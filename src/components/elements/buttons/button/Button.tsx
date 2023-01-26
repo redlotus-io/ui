@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React from "react";
+import React, { ReactNode } from "react";
 
 import { animations, AnimationWrapper } from "components";
 
@@ -33,7 +33,7 @@ const variants = {
 };
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  children: string;
+  children: ReactNode;
   isValid?: boolean;
   variant?: keyof typeof variants;
   size?: keyof typeof sizes;
