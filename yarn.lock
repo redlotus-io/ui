@@ -12789,6 +12789,11 @@ tailwind-scrollbar@^2.1.0:
   resolved "https://registry.yarnpkg.com/tailwind-scrollbar/-/tailwind-scrollbar-2.1.0.tgz#46e0b8788cef75387f9d163a5ec82b8cacd66c44"
   integrity sha512-zpvY5mDs0130YzYjZKBiDaw32rygxk5RyJ4KmeHjGnwkvbjm/PszON1m4Bbt2DkMRIXlXsfNevykAESgURN4KA==
 
+tailwindcss-animate@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tailwindcss-animate/-/tailwindcss-animate-1.0.5.tgz#a6720e3b0616e1ff922b32846729881c626a069d"
+  integrity sha512-UU3qrOJ4lFQABY+MVADmBm+0KW3xZyhMdRvejwtXqYOL7YjHYxmuREFAZdmVG5LPe5E9CAst846SLC4j5I3dcw==
+
 tailwindcss-border-gradient-radius@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/tailwindcss-border-gradient-radius/-/tailwindcss-border-gradient-radius-3.0.1.tgz#314180bcee52603b2afe30aa832c6d33574a19f1"

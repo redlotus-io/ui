@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useState } from "react";
 
 import {
@@ -26,7 +27,7 @@ export const PopupPage = () => {
             <PopoverTrigger>
               <RealButton className="w-80">hello</RealButton>
             </PopoverTrigger>
-            <PopoverContent>
+            <PopoverContent className="max-w-sm text-center">
               jgoidfgjdfoigjdfoigjodfigjdofg ijdfoigjddasdasofijdasdasdasdasdsgdofi
               gjdofigjdfoigjdfoigjdofigjdfogijdfogi
             </PopoverContent>
@@ -41,7 +42,14 @@ export const PopupPage = () => {
           maxWidth="xl"
           modalButton={<RealButton onClick={() => setIsModalOpen(true)}>Open modal</RealButton>}
         >
-          <div>here is form content hello</div>
+          <div
+            className={clsx(
+              "scrollbar-hide",
+              "flex overflow-y-auto items-center flex-col pt-2 px-3"
+            )}
+          >
+            tere
+          </div>
         </Modal>
         <div className="h-[300rem] w-28 bg-stone-200"></div>
       </div>

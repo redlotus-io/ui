@@ -91,6 +91,7 @@ module.exports = {
     require("tailwind-scrollbar")({ nocompatible: true }),
     require("tailwind-scrollbar-hide"),
     require("tailwindcss-border-gradient-radius"),
+    require("tailwindcss-animate"),
     addVariablesForColors,
   ],
 };
