@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-import { DefaultPageWrapper, Modal, Popover, RealButton } from "components";
+import {
+  DefaultPageWrapper,
+  Modal,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+  RealButton,
+} from "components";
 
 export const PopupPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,15 +20,18 @@ export const PopupPage = () => {
         </div>
       }
     >
-      <div className="space-y-6">
+      <div className="space-y-6 ml-40">
         <div className="mb-[5rem]">
-          <Popover animKey="hello1" action={<RealButton>hello</RealButton>}>
-            something
+          <Popover>
+            <PopoverTrigger>
+              <RealButton className="w-80">hello</RealButton>
+            </PopoverTrigger>
+            <PopoverContent>
+              jgoidfgjdfoigjdfoigjodfigjdofg ijdfoigjddasdasofijdasdasdasdasdsgdofi
+              gjdofigjdfoigjdfoigjdofigjdfogijdfogi
+            </PopoverContent>
           </Popover>
-          <p>tere</p>
-          <Popover animKey="hello3" action={<RealButton>hellod</RealButton>}>
-            something2
-          </Popover>
+          <p className="z-20">tere</p>
         </div>
         <p className="mb-[30rem]">Lorem ipsum 123456789 tere mis component siin on</p>
         <p className="">hello here is the end of the page</p>

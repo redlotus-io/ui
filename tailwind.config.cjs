@@ -18,7 +18,7 @@ const addVariablesForColors = ({ addBase, theme }) => {
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
-  // darkMode: "class",
+  darkMode: ["class", '[data-theme="dark"]'],
   theme: {
     screens: {
       minscreen: "340px",
