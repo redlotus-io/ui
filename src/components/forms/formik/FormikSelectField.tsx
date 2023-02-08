@@ -2,8 +2,8 @@ import { Listbox } from "@headlessui/react";
 import { useField, useFormikContext } from "formik";
 import { HiCheck, HiSelector } from "react-icons/hi";
 
-import { AnimationWrapper, InputErrorText, animations } from "components";
-import { SelectOption } from "types";
+import { AnimationWrapper, InputErrorText, animations } from "@/components";
+import { SelectOption } from "@/types";
 
 interface Props<T> {
   options: SelectOption<string | T>[];

@@ -31,7 +31,12 @@
     "noUnusedLocals": true,
     "removeComments": true,
     "strictNullChecks": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
   },
   "include": [
     "src",

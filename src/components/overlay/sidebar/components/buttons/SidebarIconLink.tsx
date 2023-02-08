@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { HTMLProps, ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 
-import { animations, AnimationWrapper, SidebarTooltip } from "components";
+import { animations, AnimationWrapper, SidebarTooltip } from "@/components";
 
 interface SidebarItemProps {
   icon: ReactNode;

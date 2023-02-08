@@ -1,6 +1,6 @@
 import { HTMLMotionProps, motion } from "framer-motion";
 
-import { useIsMobile } from "hooks";
+import { useIsMobile } from "@/hooks";
 
 interface Props {
   children?: React.ReactNode;

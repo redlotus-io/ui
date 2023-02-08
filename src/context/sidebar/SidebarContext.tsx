@@ -1,6 +1,6 @@
 import React, { createContext, Dispatch, SetStateAction, useContext, useState } from "react";
 
-import { useIsMobile } from "hooks";
+import { useIsMobile } from "@/hooks";
 
 type ProviderProps = {
   children: React.ReactNode;

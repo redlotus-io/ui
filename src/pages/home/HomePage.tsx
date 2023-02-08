@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import { HiAnnotation, HiCamera, HiEye } from "react-icons/hi";
 
-import { Button, DefaultPageWrapper, FormikInput, RealButton } from "components";
+import { Button, DefaultPageWrapper, FormikInput, RealButton } from "@/components";
 
 export const HomePage = () => {
   return (

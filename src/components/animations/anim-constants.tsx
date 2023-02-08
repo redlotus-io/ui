@@ -1,6 +1,6 @@
 import { Variants } from "framer-motion";
 
-import { SidebarPlacementType } from "context";
+import { SidebarPlacementType } from "@/context";
 
 const flyInFromTop: Variants = {
   initial: { opacity: 0, y: -100 },

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { animations, AnimationWrapper } from "components";
+import { animations, AnimationWrapper } from "@/components";
 
 interface Props {
   children: React.ReactNode;

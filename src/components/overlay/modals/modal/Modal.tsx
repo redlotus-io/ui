@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { ReactNode, useRef } from "react";
 
-import { animations, AnimationWrapper } from "components";
+import { animations, AnimationWrapper } from "@/components";
 
 const modalMaxWidth = {
   xs: "sm:w-[20rem]",
@@ -37,13 +37,6 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
             open={open}
             onClose={setOpen}
           >
-            <AnimationWrapper
-              key="app-modal-overlay"
-              id="overlay"
-              variants={animations.overlay}
-              onClick={() => setOpen(false)}
-              className="absolute inset-0 h-full w-full bg-gray-500 opacity-40"
-            />
             <button
               id="button-to-remove-autofocus"
               ref={initialFocusRef}
@@ -54,12 +47,19 @@ export const Modal = ({ children, modalButton, open, setOpen, maxWidth = "xl" }:
               id="modal-children"
               variants={animations.modalEffect}
               className={clsx(
-                "minscreen:min-w-[20rem] rounded-xl bg-white",
+                "minscreen:min-w-[20rem] rounded-xl bg-white z-[10]",
                 modalMaxWidth[maxWidth]
               )}
             >
               {children}
             </AnimationWrapper>
+            <AnimationWrapper
+              key="app-modal-overlay"
+              id="overlay"
+              variants={animations.overlay}
+              onClick={() => setOpen(false)}
+              className="absolute inset-0 h-full w-full bg-gray-500 opacity-40"
+            />
           </Dialog>
         )}
       </AnimatePresence>

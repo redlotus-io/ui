@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { useField } from "formik";
 import { ReactNode } from "react";
 
-import { InputErrorText } from "components";
+import { InputErrorText } from "@/components";
 
 const sizes = {
   sm: "py-2 px-4 text-md rounded-xl",

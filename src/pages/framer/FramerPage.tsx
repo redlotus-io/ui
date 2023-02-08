@@ -1,4 +1,4 @@
-import { ResizablePanelTutorial } from "components";
+import { ResizablePanelTutorial } from "@/components";
 
 export const FramerPage = () => {
   return (

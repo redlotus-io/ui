@@ -4,9 +4,9 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, ReactNode, Fragment, useState } from "react";
 import { HiChevronDoubleRight } from "react-icons/hi";
 
-import { animations, AnimationWrapper } from "components";
-import { useSidebar } from "context";
-import { useIsMobile, useModifySidebarBasedOnDevice, useSidebarUtils } from "hooks";
+import { animations, AnimationWrapper } from "@/components";
+import { useSidebar } from "@/context";
+import { useIsMobile, useModifySidebarBasedOnDevice, useSidebarUtils } from "@/hooks";
 
 interface Props {
   SmallSidebarContent: ReactNode;

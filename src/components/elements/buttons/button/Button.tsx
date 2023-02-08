@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import React, { ReactNode } from "react";
 
-import { animations, AnimationWrapper } from "components";
+import { animations, AnimationWrapper } from "@/components";
 
 const sizes = {
   xs: "py-1 px-3 text-sm",

@@ -1,6 +1,6 @@
-import { animations, AnimationWrapper } from "components";
-import { useSidebar } from "context";
-import { UserType } from "types";
+import { animations, AnimationWrapper } from "@/components";
+import { useSidebar } from "@/context";
+import { UserType } from "@/types";
 
 interface Props {
   user: UserType;

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
-import { useSidebar } from "context";
-import { useIsMobile } from "hooks";
+import { useSidebar } from "@/context";
+import { useIsMobile } from "@/hooks";
 
 interface Props {
   /**

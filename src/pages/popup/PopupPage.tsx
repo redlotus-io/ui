@@ -8,7 +8,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   RealButton,
-} from "components";
+} from "@/components";
 
 export const PopupPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,7 +25,7 @@ export const PopupPage = () => {
         <div className="mb-[5rem]">
           <Popover>
             <PopoverTrigger>
-              <RealButton className="w-80">hello</RealButton>
+              <RealButton className="w-[60rem]">hello</RealButton>
             </PopoverTrigger>
             <PopoverContent className="max-w-sm text-center">
               jgoidfgjdfoigjdfoigjodfigjdofg ijdfoigjddasdasofijdasdasdasdasdsgdofi

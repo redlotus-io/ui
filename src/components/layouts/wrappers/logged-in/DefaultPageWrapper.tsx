@@ -10,8 +10,8 @@ import {
   Sidebar,
   AnimationWrapper,
   animations,
-} from "components";
-import { routes } from "routes";
+} from "@/components";
+import { routes } from "@/routes";
 
 interface Props {
   children: React.ReactNode;

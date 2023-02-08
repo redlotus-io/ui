@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { HTMLProps, ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 
-import { animations, AnimationWrapper } from "components";
-import { useSidebar } from "context";
+import { animations, AnimationWrapper } from "@/components";
+import { useSidebar } from "@/context";
 
 interface SidebarItemProps {
   icon: ReactNode;

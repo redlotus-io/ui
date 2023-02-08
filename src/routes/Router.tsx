@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
-import { useThemeUtils } from "hooks";
-import { routes } from "routes";
+import { useThemeUtils } from "@/hooks";
+import { routes } from "@/routes";
 
 export const Router = () => {
   useThemeUtils();

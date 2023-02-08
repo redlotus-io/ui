@@ -1,4 +1,4 @@
-import { DefaultPageWrapper, RealButton } from "components";
+import { DefaultPageWrapper, RealButton } from "@/components";
 
 export const AboutPage = () => {
   return (

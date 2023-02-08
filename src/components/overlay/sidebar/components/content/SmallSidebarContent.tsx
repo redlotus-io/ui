@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
-import { SidebarIconLink } from "components";
-import { Router } from "types";
+import { SidebarIconLink } from "@/components";
+import { Router } from "@/types";
 interface Props {
   appLogo: string;
   routes: Router[];

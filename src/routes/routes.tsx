@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { HiAnnotation, HiArchive, HiCollection, HiFilm, HiHome } from "react-icons/hi";
 
-import { HomePage, AboutPage, SettingsPage, FramerPage, PopupPage } from "pages";
-import { Router } from "types";
+import { HomePage, AboutPage, SettingsPage, FramerPage, PopupPage } from "@/pages";
+import { Router } from "@/types";
 
 const smallIconCss = "h-8 w-8 fill-inherit";
 const bigIconCss = "mr-3 h-8 w-8 fill-inherit";

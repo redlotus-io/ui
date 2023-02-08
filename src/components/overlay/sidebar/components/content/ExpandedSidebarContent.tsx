@@ -1,8 +1,8 @@
 import { HiX } from "react-icons/hi";
 
-import { AnimationWrapper, SidebarLink, animations } from "components";
-import { useIsMobile, useModifySidebarBasedOnDevice } from "hooks";
-import { Router } from "types";
+import { AnimationWrapper, SidebarLink, animations } from "@/components";
+import { useIsMobile, useModifySidebarBasedOnDevice } from "@/hooks";
+import { Router } from "@/types";
 
 interface Props {
   appLogo: string;

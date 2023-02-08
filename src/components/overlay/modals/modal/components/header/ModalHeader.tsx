@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { HiX, HiArrowLeft } from "react-icons/hi";
 
-import { animations, ModalTitle, ModalHeaderContainer, AnimationWrapper } from "components";
+import { animations, ModalTitle, ModalHeaderContainer, AnimationWrapper } from "@/components";
 
 interface Props {
   children: ReactNode;
