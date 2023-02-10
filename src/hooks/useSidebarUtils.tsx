@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import { useSidebar } from "@/context";
 import { useIsMobile } from "@/hooks";
@@ -65,15 +64,4 @@ export const useModifySidebarBasedOnDevice = () => {
     }
   };
   return { modifyBasedOnDevice, modifyOnClick };
-};
-
-export const useRouteChanged = () => {
-  const location = useLocation();
-  const [routeChanged, setRouteChanged] = useState<boolean>(false);
-
-  useEffect(() => {
-    setRouteChanged(true);
-  }, [location]);
-
-  return { routeChanged, setRouteChanged };
 };

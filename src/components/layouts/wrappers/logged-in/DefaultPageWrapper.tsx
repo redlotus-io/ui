@@ -1,5 +1,4 @@
 import { HiArchive, HiHome } from "react-icons/hi";
-import { Link } from "react-router-dom";
 
 import {
   ExpandedSidebarContent,
@@ -10,6 +9,7 @@ import {
   Sidebar,
   AnimationWrapper,
   animations,
+  LotusLink,
 } from "@/components";
 import { routes } from "@/routes";
 
@@ -21,16 +21,16 @@ interface Props {
 const NavbarBottomContent = () => {
   return (
     <>
-      <Link to="/">
+      <LotusLink to="/">
         <AnimationWrapper variants={animations.smallScale} key="nb-home-icon">
           <HiHome className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
         </AnimationWrapper>
-      </Link>
-      <Link to="/about">
+      </LotusLink>
+      <LotusLink to="/about">
         <AnimationWrapper variants={animations.smallScale} key="nb-chart-icon">
           <HiArchive className="h-14 w-14 cursor-pointer fill-slate-700 hover:fill-slate-800" />
         </AnimationWrapper>
-      </Link>
+      </LotusLink>
     </>
   );
 };

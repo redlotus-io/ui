@@ -1,9 +1,8 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { HTMLProps, ReactNode } from "react";
-import { NavLink } from "react-router-dom";
 
-import { animations, AnimationWrapper, SidebarTooltip } from "@/components";
+import { animations, AnimationWrapper, LotusLink, SidebarTooltip } from "@/components";
 
 interface SidebarItemProps {
   icon: ReactNode;
@@ -52,13 +51,13 @@ export const SidebarIconLink = ({ children, to, icon, tooltip, ...props }: Props
   return (
     <div role="button" tabIndex={0} className="z-[1205]" {...props}>
       {to ? (
-        <NavLink to={to} end>
-          {({ isActive }) => (
+        <LotusLink to={to}>
+          {({ isActive }: any) => (
             <Content icon={icon} tooltip={tooltip} isActive={isActive}>
               {children}
             </Content>
           )}
-        </NavLink>
+        </LotusLink>
       ) : (
         <Content icon={icon} tooltip={tooltip}>
           {children}

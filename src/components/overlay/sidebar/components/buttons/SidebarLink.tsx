@@ -1,9 +1,8 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { HTMLProps, ReactNode } from "react";
-import { NavLink } from "react-router-dom";
 
-import { animations, AnimationWrapper } from "@/components";
+import { animations, AnimationWrapper, LotusLink } from "@/components";
 import { useSidebar } from "@/context";
 
 interface SidebarItemProps {
@@ -62,13 +61,13 @@ export const SidebarLink = ({ children, to, icon, ...props }: Props) => {
       {...props}
     >
       {to ? (
-        <NavLink to={to} end>
-          {({ isActive }) => (
+        <LotusLink to={to}>
+          {({ isActive }: any) => (
             <Content icon={icon} isActive={isActive}>
               {children}
             </Content>
           )}
-        </NavLink>
+        </LotusLink>
       ) : (
         <Content icon={icon}>{children}</Content>
       )}
