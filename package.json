@@ -1,6 +1,6 @@
 {
   "name": "@redlotus/ui",
-  "version": "0.1.60",
+  "version": "0.1.68",
   "description": "React UI library",
   "type": "module",
   "scripts": {
@@ -29,7 +29,7 @@
   ],
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
-  "@/types": "dist/types/src/index.d.ts",
+  "types": "dist/types/src/index.d.ts",
   "author": "Tomi Markus Alber",
   "license": "MIT",
   "bugs": {
