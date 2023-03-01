@@ -1,52 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false,
-    "outDir": "dist",
-    "jsx": "react-jsx",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
     "declaration": true,
-    "declarationMap": true,
     "sourceMap": true,
-    "incremental": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "isolatedModules": true,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "removeComments": true,
-    "strictNullChecks": true,
-    "baseUrl": "src",
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true
   },
   "include": [
-    "src",
-    "**/*.ts",
-    "**/*.tsx",
-    "*.js",
-    "tailwind.config.cjs"
+    "packages",
   ],
-  "exclude": [
-    "node_modules",
-    "dist",
-  ],
+  "exclude": ["**/node_modules"],
+    "references": [
+    { "path": "../packages" }, 
+    { "path": "../examples/next-app" },
+    { "path": "../examples/vite-ts" },
+  ]
 }
