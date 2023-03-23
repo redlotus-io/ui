@@ -2,6 +2,12 @@ import * as PopoverPrimitive from "@radix-ui/react-popover";
 import clsx from "clsx";
 import React from "react";
 
+export const popoverSizes = {
+  sm: "w-32",
+  md: "w-48",
+  lg: "w-64",
+};
+
 export const Popover = PopoverPrimitive.Root;
 
 export const PopoverTrigger = PopoverPrimitive.Trigger;

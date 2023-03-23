@@ -1,3 +1,3 @@
-export * from "./modals";
+export * from "./Modal";
 export * from "./sidebar";
-export * from "./popovers";
+export * from "./Popover";

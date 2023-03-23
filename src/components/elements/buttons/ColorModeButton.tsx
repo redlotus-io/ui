@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { RealButton } from "..";
+import { RealButton } from ".";
 
 export const ColorModeButton = () => {
   const [isDark, setIsDark] = useState(false);
